@@ -1,7 +1,8 @@
-/node_modules
+__pycache__/
+*.pyc
+.pytest_cache/
+venv/
 .env
-/partselect-agent/venv
-/partselect-agent/.pytest_cache
-/partselect-agent/backend/__pycache__
-__pycache__
-
+node_modules/
+.next/
+*.log
