@@ -3,18 +3,22 @@ import json
 import ast
 from langchain.agents import create_agent
 from langchain_core.tools import Tool
+from pydantic import BaseModel, Field
 from backend.llm import flash
 from backend.tools.catalog_tools import (
-    lookup_part, check_compatibility, get_installation_info, find_parts_by_symptom,
+    lookup_part, lookup_model, check_compatibility, get_installation_info, find_parts_by_symptom,
 )
 from backend.tools.repair_tools import search_repair_guides
 from backend.tools.order_tools import add_to_cart, get_order_status
 from backend.prompts import CATALOG_AGENT_PROMPT, REPAIR_AGENT_PROMPT, ORDER_AGENT_PROMPT
 
+class AgentQuery(BaseModel):
+    query: str = Field(description="The user's query or request to route to the specialist agent.")
+
 # ── Specialist executors ──────────────────────────────────────────
 catalog_executor = create_agent(
     model=flash,
-    tools=[lookup_part, check_compatibility, get_installation_info, find_parts_by_symptom],
+    tools=[lookup_part, lookup_model, check_compatibility, get_installation_info, find_parts_by_symptom],
     system_prompt=CATALOG_AGENT_PROMPT,
 )
 
@@ -108,12 +112,13 @@ def _format_agent_result(result: dict) -> str:
 catalog_agent_tool = Tool(
     name="catalog_agent",
     description=(
-        "Handles part lookups, compatibility checks, installation info, and finding "
-        "parts by symptom. Use for: 'find part X', 'is X compatible with Y', "
+        "Handles part lookups, model lookups, compatibility checks, installation info, and finding "
+        "parts by symptom. Use for: 'find part X', 'tell me about model Y', 'is X compatible with Y', "
         "'how to install X', 'what part fixes [symptom]'."
     ),
     coroutine=_run_catalog,
-    func=lambda q: None,   # async-only
+    func=lambda query: None,   # async-only
+    args_schema=AgentQuery,
 )
 
 repair_agent_tool = Tool(
@@ -123,7 +128,8 @@ repair_agent_tool = Tool(
         "'ice maker not working', 'how to fix X'."
     ),
     coroutine=_run_repair,
-    func=lambda q: None,
+    func=lambda query: None,
+    args_schema=AgentQuery,
 )
 
 order_agent_tool = Tool(
@@ -133,5 +139,6 @@ order_agent_tool = Tool(
         "'where is my order', 'check order ORD-XXX'."
     ),
     coroutine=_run_order,
-    func=lambda q: None,
+    func=lambda query: None,
+    args_schema=AgentQuery,
 )

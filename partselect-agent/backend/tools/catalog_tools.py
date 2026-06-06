@@ -23,6 +23,23 @@ async def lookup_part(identifier: str) -> dict:
     return dict(row)
 
 @tool
+async def lookup_model(model_number: str) -> dict:
+    """Get details for an appliance model by model number (e.g. WRS322FDAM00).
+    Returns the brand, appliance type, and database status of the model."""
+    pool = await get_pool()
+    async with pool.acquire() as conn:
+        row = await conn.fetchrow("""
+            select model_number, brand, appliance_type 
+            from appliance_models 
+            where model_number = $1
+            limit 1
+        """, model_number)
+    if not row:
+        return {"error": "model_not_found", "model_number": model_number,
+                "hint": "Model numbers look like WDT780SAEM1. Check the tag inside your appliance door."}
+    return dict(row)
+
+@tool
 async def check_compatibility(ps_number: str, model_number: str) -> dict:
     """Deterministically check if a part fits a specific appliance model.
     Returns a boolean from the compatibility matrix plus both appliance types

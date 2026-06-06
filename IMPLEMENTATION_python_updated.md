@@ -209,6 +209,7 @@ psql "$DATABASE_URL" -f db/schema.sql
 
 ```python
 # backend/db.py
+import asyncio
 import asyncpg
 import os
 
@@ -216,7 +217,13 @@ pool: asyncpg.Pool | None = None
 
 async def get_pool() -> asyncpg.Pool:
     global pool
-    if pool is None:
+    current_loop = asyncio.get_running_loop()
+    if pool is None or pool._loop is not current_loop or pool._closed:
+        if pool is not None:
+            try:
+                await pool.close()
+            except Exception:
+                pass
         pool = await asyncpg.create_pool(os.environ["DATABASE_URL"])
     return pool
 
@@ -227,22 +234,40 @@ async def get_conn():
 async def release_conn(conn):
     p = await get_pool()
     await p.release(conn)
+
+async def close_pool():
+    global pool
+    if pool is not None:
+        await pool.close()
+        pool = None
 ```
 
 ## 6. Embedding helper
 
 ```python
 # backend/embeddings.py
+import asyncio
 from google import genai
+from google.genai import types
 import os
+from dotenv import load_dotenv
 
+# Ensure latest keys are loaded from .env
+load_dotenv(override=True)
+
+# Initialize Google GenAI client
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
 async def embed(text: str) -> list[float]:
-    response = client.models.embed_content(
-        model="text-embedding-004",
-        content=text,
-    )
+    """Generate 768-dimensional embeddings using gemini-embedding-2."""
+    def _call_embed():
+        return client.models.embed_content(
+            model="gemini-embedding-2",
+            contents=text,
+            config=types.EmbedContentConfig(output_dimensionality=768)
+        )
+    
+    response = await asyncio.to_thread(_call_embed)
     return response.embeddings[0].values
 ```
 
@@ -857,21 +882,31 @@ proceeding.
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
-import json, os
+import json
+import os
 from dotenv import load_dotenv
-load_dotenv()
 
-from backend.db import get_pool, release_conn
+load_dotenv(override=True)
+
+from backend.db import get_pool
 from backend.guardrail import is_in_scope
 from backend.agents.orchestrator import run_orchestrator
 from backend.memory import save_session
 
-app = FastAPI()
-app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:3000"],
-                   allow_methods=["*"], allow_headers=["*"])
+app = FastAPI(title="PartSelect Parts Assistant API")
+
+# Configure CORS so Next.js frontend can call it directly
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000", "http://localhost:3001"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.on_event("startup")
 async def startup():
+    # Initialize connection pool on startup
     await get_pool()
 
 @app.post("/chat")
@@ -881,38 +916,64 @@ async def chat(request: Request):
     session_id = body.get("session_id", "default")
 
     async def event_stream():
+        # Get the last user message
         last_user_msg = next(
-            (m["content"] for m in reversed(messages) if m["role"] == "user"), "")
+            (m["content"] for m in reversed(messages) if m["role"] == "user"), ""
+        )
 
-        # 1) Guardrail
-        if not await is_in_scope(last_user_msg):
-            yield _sse("text", "I'm the PartSelect parts assistant — I can help "
-                "with refrigerator and dishwasher parts, compatibility, installation, "
-                "repairs, and order tracking. What can I help you find?")
+        # 1) Guardrail Scope Check
+        try:
+            in_scope = await is_in_scope(last_user_msg)
+        except Exception as e:
+            # Fallback in case of API errors/rate limits
+            print(f"Guardrail error: {e}")
+            in_scope = True  # Safe default fallback
+
+        if not in_scope:
+            refusal_text = (
+                "I am the PartSelect parts assistant. I can help you find refrigerator "
+                "and dishwasher parts, check model compatibility, troubleshoot problems, "
+                "or track orders. What refrigerator or dishwasher part can I help you find today?"
+            )
+            yield _sse("text", refusal_text)
             yield _sse("done", {})
             return
 
-        yield _sse("tool_status", {"state": "routing", "message": "Finding the right specialist…"})
+        yield _sse("tool_status", {"state": "routing", "message": "Finding the right specialist..."})
 
         # 2) Build context from recent messages
-        context = "\n".join(f"{m['role']}: {m['content']}" for m in messages[-6:])
+        context = "\n".join(f"{m['role']}: {m['content']}" for m in messages[-6:-1])
 
-        # 3) Run orchestrator
-        result = await run_orchestrator(last_user_msg, context)
+        # 3) Run routing orchestrator
+        try:
+            result = await run_orchestrator(last_user_msg, context)
+        except Exception as e:
+            error_message = (
+                f"Sorry, I encountered an issue communicating with the AI service: {e}. "
+                "This might be due to free-tier API rate limits. Please try again in a few seconds."
+            )
+            yield _sse("text", error_message)
+            yield _sse("done", {})
+            return
 
-        # 4) Stream tool results (frontend renders as cards)
+        # 4) Stream tool results (frontend renders these as cards)
         for tr in result.get("tool_results", []):
             yield _sse("tool_result", tr)
 
-        # 5) Stream text
+        # 5) Stream assistant text response
         yield _sse("text", result.get("text", ""))
+        
+        # 6) Signal completion
         yield _sse("done", {"agent": result.get("agent")})
 
-        # 6) Persist session
-        pool = await get_pool()
-        async with pool.acquire() as conn:
-            assistant_msg = {"role": "assistant", "content": result.get("text", "")}
-            await save_session(conn, session_id, messages + [assistant_msg])
+        # 7) Persist session in Supabase/PostgreSQL
+        try:
+            pool = await get_pool()
+            async with pool.acquire() as conn:
+                assistant_msg = {"role": "assistant", "content": result.get("text", "")}
+                await save_session(conn, session_id, messages + [assistant_msg])
+        except Exception as e:
+            print(f"Error saving session: {e}")
 
     return StreamingResponse(event_stream(), media_type="text/event-stream")
 
@@ -940,15 +1001,14 @@ curl -X POST http://localhost:8000/chat \
 ## 19. Frontend setup
 
 ```bash
-cd frontend
-npx create-next-app@latest . --ts --app   # decline Tailwind
-# No AI SDK needed — we use a custom hook
+# Initialize Next.js project inside partselect-agent/frontend, declining Tailwind CSS and ESLint in non-interactive mode
+npx -y create-next-app@latest frontend --ts --app --src-dir --import-alias "@/*" --no-tailwind --no-eslint --use-npm --disable-git --yes
 ```
 
 ## 20. Custom `useAgentChat` hook
 
 ```tsx
-// frontend/hooks/useAgentChat.ts
+// frontend/src/hooks/useAgentChat.ts
 "use client";
 import { useState, useCallback, useRef } from "react";
 
@@ -972,15 +1032,30 @@ export function useAgentChat({ sessionId }: { sessionId: string }) {
   const idRef = useRef(0);
 
   const sendMessage = useCallback(async (text: string) => {
+    if (!text.trim()) return;
+
+    // Create user message
     const userMsg: ChatMessage = {
-      id: `msg-${++idRef.current}`, role: "user", content: text,
+      id: `msg-${++idRef.current}`,
+      role: "user",
+      content: text,
     };
-    const updated = [...messages, userMsg];
-    setMessages(updated);
+
+    const assistantId = `msg-${++idRef.current}`;
+    
+    // Compute current messages synchronously
+    const backendMessages = [...messages, userMsg];
+
+    // We add the user message and a placeholder for the assistant
+    setMessages(prev => [
+      ...prev,
+      userMsg,
+      { id: assistantId, role: "assistant", content: "", toolResults: [] }
+    ]);
+    
     setStatus("streaming");
     setToolStatus(null);
 
-    const assistantId = `msg-${++idRef.current}`;
     let assistantText = "";
     const toolResults: ToolResult[] = [];
 
@@ -989,12 +1064,16 @@ export function useAgentChat({ sessionId }: { sessionId: string }) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          messages: updated.map(m => ({ role: m.role, content: m.content })),
+          messages: backendMessages.map(m => ({ role: m.role, content: m.content })),
           session_id: sessionId,
         }),
       });
 
-      const reader = resp.body!.getReader();
+      if (!resp.body) {
+        throw new Error("No response body");
+      }
+
+      const reader = resp.body.getReader();
       const decoder = new TextDecoder();
       let buffer = "";
 
@@ -1007,26 +1086,73 @@ export function useAgentChat({ sessionId }: { sessionId: string }) {
         buffer = blocks.pop() || "";
 
         for (const block of blocks) {
-          const eventMatch = block.match(/^event: (\w+)/);
-          const dataMatch = block.match(/data: (.*)/s);
-          if (!eventMatch || !dataMatch) continue;
-          const [, eventType] = eventMatch;
-          const data = JSON.parse(dataMatch[1]);
+          if (!block.trim()) continue;
 
-          if (eventType === "tool_status") setToolStatus(data.message);
-          else if (eventType === "tool_result") toolResults.push(data);
-          else if (eventType === "text") assistantText = data;
+          const lines = block.split("\n");
+          let eventType = "";
+          let dataStr = "";
+
+          for (const line of lines) {
+            if (line.startsWith("event: ")) {
+              eventType = line.slice(7).trim();
+            } else if (line.startsWith("data: ")) {
+              dataStr = line.slice(6).trim();
+            }
+          }
+
+          if (!eventType || !dataStr) continue;
+
+          let data;
+          try {
+            data = JSON.parse(dataStr);
+          } catch {
+            data = dataStr;
+          }
+
+          if (eventType === "tool_status") {
+            setToolStatus(data.message || data);
+          } else if (eventType === "tool_result") {
+            toolResults.push(data);
+            setMessages(prev => {
+              return prev.map(m => {
+                if (m.id === assistantId) {
+                  return {
+                    ...m,
+                    toolResults: [...toolResults]
+                  };
+                }
+                return m;
+              });
+            });
+          } else if (eventType === "text") {
+            assistantText = data;
+            setMessages(prev => {
+              return prev.map(m => {
+                if (m.id === assistantId) {
+                  return {
+                    ...m,
+                    content: assistantText
+                  };
+                }
+                return m;
+              });
+            });
+          }
         }
       }
-
-      setMessages(prev => [...prev, {
-        id: assistantId, role: "assistant", content: assistantText, toolResults,
-      }]);
-    } catch {
-      setMessages(prev => [...prev, {
-        id: assistantId, role: "assistant",
-        content: "Sorry, something went wrong. Please try again.", toolResults: [],
-      }]);
+    } catch (err) {
+      console.error("SSE stream error:", err);
+      setMessages(prev => {
+        return prev.map(m => {
+          if (m.id === assistantId) {
+            return {
+              ...m,
+              content: "Sorry, I encountered an error. Please check your connection and try again."
+            };
+          }
+          return m;
+        });
+      });
     } finally {
       setStatus("idle");
       setToolStatus(null);
