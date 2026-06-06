@@ -148,7 +148,7 @@ export function useAgentChat({ sessionId }: { sessionId: string }) {
       setStatus("idle");
       setToolStatus(null);
     }
-  }, [sessionId]);
+  }, [messages, sessionId]);
 
   return { messages, sendMessage, status, toolStatus };
 }

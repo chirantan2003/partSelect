@@ -41,9 +41,12 @@ async def chat(request: Request):
             (m["content"] for m in reversed(messages) if m["role"] == "user"), ""
         )
 
-        # 1) Guardrail Scope Check
+        # 1) Build context from recent messages
+        context = "\n".join(f"{m['role']}: {m['content']}" for m in messages[-6:-1])
+
+        # 2) Guardrail Scope Check
         try:
-            in_scope = await is_in_scope(last_user_msg)
+            in_scope = await is_in_scope(last_user_msg, context)
         except Exception as e:
             # Fallback in case of API errors/rate limits
             print(f"Guardrail error: {e}")
@@ -60,9 +63,6 @@ async def chat(request: Request):
             return
 
         yield _sse("tool_status", {"state": "routing", "message": "Finding the right specialist..."})
-
-        # 2) Build context from recent messages
-        context = "\n".join(f"{m['role']}: {m['content']}" for m in messages[-6:-1])
 
         # 3) Run routing orchestrator
         try:
