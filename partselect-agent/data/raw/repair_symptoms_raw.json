@@ -1,0 +1,1747 @@
+{
+  "metadata": {
+    "scraper_type": "repair",
+    "scraper_version": "1.0",
+    "scraped_date": "2026-06-06",
+    "total_documents": 19,
+    "failed_urls": 2
+  },
+  "documents": [
+    {
+      "id": "repair_0000",
+      "source_type": "repair_symptom",
+      "appliance_type": "refrigerator",
+      "symptom_name": "Noisy",
+      "symptom_slug": "Noisy",
+      "title": "How To Fix A Noisy Refrigerator",
+      "difficulty": "Unknown",
+      "repair_story": "Click a Part Below to Start Your Repair:Condenser Fan MotorEvaporator Fan MotorEvaporator Fan Motor GrommetAbout this repair:Rated as EASY1875 repair stories33 step by step videos",
+      "video": null,
+      "related_parts": [],
+      "inspection_steps": [
+        {
+          "step_no": 1,
+          "text": "Disconnect your refrigerator from the power source and then remove the rear access panel."
+        },
+        {
+          "step_no": 2,
+          "text": "Locate the condenser fan motor, it is usually found near the compressor at the bottom rear of the refrigerator."
+        },
+        {
+          "step_no": 3,
+          "text": "Visually inspect the condenser fan motor for any signs of wear or damage. Look for any debris or obstructions that could be preventing the fan from moving freely."
+        },
+        {
+          "step_no": 4,
+          "text": "If the fan motor is seized or worn, you will need areplacement condenser fan motor."
+        },
+        {
+          "step_no": 5,
+          "text": "After unplugging your refrigerator, remove the evaporator fan cover. The evaporator fan cover is located inside the unit in the freezer compartment."
+        },
+        {
+          "step_no": 6,
+          "text": "Inspect the evaporator motor for any signs of wear or damage. If there is a significant amount of ice on the motor, defrost your freezer and see if that resolves the issue."
+        },
+        {
+          "step_no": 7,
+          "text": "Attempt to manually turn the motor shaft, it should turn freely with minimal resistance."
+        },
+        {
+          "step_no": 8,
+          "text": "If you cannot turn it easily, or if it is noticeably worn, you need areplacement evaporator fan motor."
+        },
+        {
+          "step_no": 9,
+          "text": "Unplug your refrigerator."
+        },
+        {
+          "step_no": 10,
+          "text": "Remove the evaporator fan cover, which will be found inside the freezer compartment."
+        },
+        {
+          "step_no": 11,
+          "text": "Inspect the grommet to see if it has fallen off, or it if is showing signs of wear or damage.."
+        },
+        {
+          "step_no": 12,
+          "text": "If any of the above are true, you will need areplacement evaporator fan motor grommet."
+        }
+      ],
+      "all_ps_numbers": [],
+      "source_url": "https://www.partselect.com/Repair/Refrigerator/Noisy/"
+    },
+    {
+      "id": "repair_0001",
+      "source_type": "repair_symptom",
+      "appliance_type": "refrigerator",
+      "symptom_name": "Leaking",
+      "symptom_slug": "Leaking",
+      "title": "How To Fix Leaking Refrigerator",
+      "difficulty": "Unknown",
+      "repair_story": "Click a Part Below to Start Your Repair:Door Gaskets Or SealsWater Inlet ValveIce Maker AssemblyAbout this repair:Rated as EASY3265 repair stories18 step by step videos",
+      "video": null,
+      "related_parts": [],
+      "inspection_steps": [
+        {
+          "step_no": 1,
+          "text": "After unplugging your refrigerator, open the fridge and freezer doors to inspect the door gaskets or seals."
+        },
+        {
+          "step_no": 2,
+          "text": "You are looking for any discoloration, mold, wear, missing pieces, or anything else that may prevent a proper seal."
+        },
+        {
+          "step_no": 3,
+          "text": "If you find any of the above, you will needreplacement gaskets or seals."
+        },
+        {
+          "step_no": 4,
+          "text": "Unplug your refrigerator, disconnect the water supply and locate your water inlet valve. It is usually on the rear of the fridge, near the bottom. You will need to remove the rear panel to access it."
+        },
+        {
+          "step_no": 5,
+          "text": "Inspect the valve inlet supply connections for leaks and tighten or replace the connectors. You should also inspect the valve body for any cracks or damage. Check the outlet tubing for cracks or abrasions that may also create a leak and replace any cracked or brittle tubing and connectors."
+        },
+        {
+          "step_no": 6,
+          "text": "If none of the above appear to be the cause of the leak, remove the water inlet valve from the unit."
+        },
+        {
+          "step_no": 7,
+          "text": "Using a multi-meter on the Rx1 setting, test your valve for conitniuty by placing the probes on the valve’s terminals. You should receive a reading of 200 to 500 ohms."
+        },
+        {
+          "step_no": 8,
+          "text": "If you receive any other reading, you need areplacement water inlet valve."
+        },
+        {
+          "step_no": 9,
+          "text": "Disconnect your appliance from both the power source and water source."
+        },
+        {
+          "step_no": 10,
+          "text": "Inspect the fill tube and the fill cup area at the back of the icemaker to make sure that they are not frozen. If there is an ice buildup in that area, confirm no foreign objects have disrupted the flow of water into the fill cup."
+        },
+        {
+          "step_no": 11,
+          "text": "Inspect the outlet tubing from the fill valve to the ice maker fill tube for any signs of restrictions."
+        },
+        {
+          "step_no": 12,
+          "text": "If any issues are found while performing the checks above, you will may areplacement ice maker assembly. If nothing obvious has caused the ice buildup, then suspect the inlet valve or tubing."
+        }
+      ],
+      "all_ps_numbers": [],
+      "source_url": "https://www.partselect.com/Repair/Refrigerator/Leaking/"
+    },
+    {
+      "id": "repair_0002",
+      "source_type": "repair_symptom",
+      "appliance_type": "refrigerator",
+      "symptom_name": "Will Not Start",
+      "symptom_slug": "Will-Not-Start",
+      "title": "How To Fix A Refrigerator That Will Not Start",
+      "difficulty": "complex",
+      "repair_story": "Click a Part Below to Start Your Repair:Overload Or Relay-Start CapacitorCold Control & Temperature ControlElectronic Control BoardAbout this repair:Rated as EASY365 repair stories8 step by step videos",
+      "video": null,
+      "related_parts": [],
+      "inspection_steps": [
+        {
+          "step_no": 1,
+          "text": "Begin by ensuring you have unplugged your refrigerator, and then remove the rear panel."
+        },
+        {
+          "step_no": 2,
+          "text": "Locate and remove your overload or relay-start capacitor. On modern refrigerators the overload relay is usually a combined part and plugs directly onto the side of the compressor. There may also be a start capacitor attached to the relay overload assembly, which provides increased starting voltage to the compressor windings."
+        },
+        {
+          "step_no": 3,
+          "text": "To test, begin by discharging the capacitor, then set your multi-meter to the Rx1 setting and place the probes onto the terminals of the overload capacitor and/or the relay-start capacitor. The reading you should receive will vary from model to model, and may be indicated on the outside of the capacitor, or in your owner’s manual."
+        },
+        {
+          "step_no": 4,
+          "text": "If your test does not produce the reading the manufacturer recommends, you need areplacement overload or relay-start capacitor. If your tests do produce the recommended readings you may have a defective compressor, which will need to be tested by a qualified professional as it is a live circuit test."
+        },
+        {
+          "step_no": 5,
+          "text": "After disconnecting your appliance from the power source, open your refrigerator door and locate the control. It will be located behind the temperature adjustment knob and is usually found in the fresh food section control panel."
+        },
+        {
+          "step_no": 6,
+          "text": "Remove the control from the fridge in order to test it."
+        },
+        {
+          "step_no": 7,
+          "text": "Using a multi-meter on the Rx1 setting, set your control to the lowest (warmest) setting, and place the probes on the terminals. You are testing for continuity and you should receive a reading of infinity."
+        },
+        {
+          "step_no": 8,
+          "text": "With the probes still on the terminals, adjust the control to higher (colder) and higher settings, your reading should then change to zero, indicating that you have continuity."
+        },
+        {
+          "step_no": 9,
+          "text": "If your control fails either of the tests above, you will need areplacement cold control & temperature control."
+        },
+        {
+          "step_no": 10,
+          "text": "Ensure that you have disconnected your appliance from the power before beginning as you will be handling electrical components."
+        },
+        {
+          "step_no": 11,
+          "text": "Open your refrigerator door to locate and remove the electronic control board from your appliance. It will be located inside the control box, which is usually found attached to the top or side of the fridge."
+        },
+        {
+          "step_no": 12,
+          "text": "Look on the control board for signs of arcing, burnt connections, damaged foil, wear, or any other damage."
+        },
+        {
+          "step_no": 13,
+          "text": "If you find any of the above, you need areplacement electronic control board."
+        }
+      ],
+      "all_ps_numbers": [],
+      "source_url": "https://www.partselect.com/Repair/Refrigerator/Will-Not-Start/"
+    },
+    {
+      "id": "repair_0003",
+      "source_type": "repair_symptom",
+      "appliance_type": "refrigerator",
+      "symptom_name": "Ice Maker Not Making Ice",
+      "symptom_slug": "Not-Making-Ice",
+      "title": "How To Fix A Refrigerator That's Not Making Ice",
+      "difficulty": "Unknown",
+      "repair_story": "Click a Part Below to Start Your Repair:Water Fill TubesWater Inlet ValveIce & Water FilterIce Maker Assembly & Replacement Ice MakerAbout this repair:Rated as EASY3458 repair stories23 step by step videos",
+      "video": null,
+      "related_parts": [],
+      "inspection_steps": [
+        {
+          "step_no": 1,
+          "text": "Before beginning, disconnect both the power and water source from your refrigerator."
+        },
+        {
+          "step_no": 2,
+          "text": "At the back of the icemaker, inspect the fill tube and the fill cup area at the back of the ice maker to make sure that they are not frozen. If there is an ice buildup in that area, confirm no foreign objects have disrupted the flow of water into the fill cup."
+        },
+        {
+          "step_no": 3,
+          "text": "Inspect the outlet tubing from the fill valve to the ice maker fill tube for any signs of restrictions."
+        },
+        {
+          "step_no": 4,
+          "text": "If you find any issues while performing the checks above, you will needreplacement water fill tubes."
+        },
+        {
+          "step_no": 5,
+          "text": "Disconnect your appliance from the power and water source before beginning."
+        },
+        {
+          "step_no": 6,
+          "text": "Remove the rear access panel and locate your water inlet valve, it is usually found near the bottom."
+        },
+        {
+          "step_no": 7,
+          "text": "Before removing the inlet valve, look for any signs of leaks or loose connectors in the valve inlet supply. If no issues are found, inspect the valve body for any cracks or damage."
+        },
+        {
+          "step_no": 8,
+          "text": "Inspect the outlet tubing for any brittle tubing, abrasions, cracks, or any other damage."
+        },
+        {
+          "step_no": 9,
+          "text": "If you do not locate any leaks, disconnect the water inlet valve and remove it from the refrigerator to test it"
+        },
+        {
+          "step_no": 10,
+          "text": "Set your multi-meter to the Rx1 setting and touch the terminals with the probes. You are testing for continuity and should receive a reading of 200 to 500 ohms."
+        },
+        {
+          "step_no": 11,
+          "text": "If you receive any other reading, you need areplacement water inlet valve."
+        },
+        {
+          "step_no": 12,
+          "text": "Determine when you last replaced your water filter. Replacement frequency varies by model and local water quality, but you should never go longer than 12 months without replacing your water filter."
+        },
+        {
+          "step_no": 13,
+          "text": "Locate your water filter. Location varies by model and brand, but it is often found inside the unit attached to the ceiling or back corner, behind the base grill, or in the water line leading to the fridge. If your filter is in the water line, you will need to turn off the water supply before removing the filter."
+        },
+        {
+          "step_no": 14,
+          "text": "Due to the variety of filters and placements we suggest you followbrand specific install instructionsor refer to manufacturer guidelines. Before installing the new filter note the install date on the filter or on your calendar."
+        },
+        {
+          "step_no": 15,
+          "text": "If it has been longer than the manufacturer recommended guidelines, or you filter is damaged, you will need areplacement ice and water filter."
+        },
+        {
+          "step_no": 16,
+          "text": "Begin by disconnecting the water source and unplugging your refrigerator."
+        },
+        {
+          "step_no": 17,
+          "text": "Open the freezer door in order to inspect the fill cup area and the fill tube itself for any signs of damage, wear, or freezing."
+        },
+        {
+          "step_no": 18,
+          "text": "Inspect the outlet tubing from the fill valve to the ice maker fill tube for any signs of restrictions."
+        },
+        {
+          "step_no": 19,
+          "text": "If there is an ice buildup in either area, confirm no foreign objects have disrupted the flow of water into the fill cup, and allow the freezer to defrost to see if that resolves the issue."
+        },
+        {
+          "step_no": 20,
+          "text": "If any issues are found while performing the checks above & defrosting the freezer did not solve the issue, you will need areplacement ice maker assembly. If nothing obvious has caused the ice buildup, then suspect the inlet valve or tubing."
+        }
+      ],
+      "all_ps_numbers": [],
+      "source_url": "https://www.partselect.com/Repair/Refrigerator/Not-Making-Ice/"
+    },
+    {
+      "id": "repair_0004",
+      "source_type": "repair_symptom",
+      "appliance_type": "refrigerator",
+      "symptom_name": "Fridge Too Warm",
+      "symptom_slug": "Refrigerator-Too-Warm",
+      "title": "How To Fix A Refrigerator That's Too Warm",
+      "difficulty": "Unknown",
+      "repair_story": "Click a Part Below to Start Your Repair:Air Inlet Damper Or BaffleAbout this repair:Rated as REALLY EASY16 repair stories",
+      "video": null,
+      "related_parts": [],
+      "inspection_steps": [
+        {
+          "step_no": 1,
+          "text": "Disconnect your refrigerator from the power source and open your refrigerator door to locate the damper or baffle. It will be found where the cold air enters the fresh food compartment."
+        },
+        {
+          "step_no": 2,
+          "text": "The housing that the baffle or damper is encased in is often made of plastic with a Styrofoam lining and may have a foam seal to prevent air leakage. Care should be used when inspecting the housing to avoid damage to the seal or the Styrofoam."
+        },
+        {
+          "step_no": 3,
+          "text": "Some refrigerator models use a temperature sensing bulb attached to this control that will automatically adjust the control for changes in the interior temperature. Make sure that the sensing bulb is in the correct position and is not damaged."
+        },
+        {
+          "step_no": 4,
+          "text": "Attempt to operate the control knob to verify that the linkage is intact and that it moves freely."
+        },
+        {
+          "step_no": 5,
+          "text": "If the damper/baffle is stuck in the closed or nearly closed position or does not move freely, then you need areplacement air inlet damper or baffle."
+        }
+      ],
+      "all_ps_numbers": [],
+      "source_url": "https://www.partselect.com/Repair/Refrigerator/Refrigerator-Too-Warm/"
+    },
+    {
+      "id": "repair_0005",
+      "source_type": "repair_symptom",
+      "appliance_type": "refrigerator",
+      "symptom_name": "Not Dispensing Water",
+      "symptom_slug": "Not-Dispensing-Water",
+      "title": "How To A Fix Refrigerator That's Not Dispensing Water",
+      "difficulty": "Unknown",
+      "repair_story": "Click a Part Below to Start Your Repair:Ice & Water FilterWater Inlet ValveWater Dispenser ActuatorMicro SwitchDispenser Control BoardAbout this repair:Rated as EASY1940 repair stories29 step by step videos",
+      "video": null,
+      "related_parts": [],
+      "inspection_steps": [
+        {
+          "step_no": 1,
+          "text": "Consider when you last changed your ice and water filter. How frequently you need to change your filter varies by model and local water conditions, but you should never exceed 12 months of use per filter."
+        },
+        {
+          "step_no": 2,
+          "text": "Find and remove your water filter. The exact location differs from model to model, but it is commonly located in the water line leading to the fridge, behind the base grill, or inside the unit attached to the rear corner or ceiling. If your filter is in the water line, you will need to disconnect the water supply before beginning."
+        },
+        {
+          "step_no": 3,
+          "text": "With the variety of locations and removal instructions, we recommend you followbrand specific directions, or refer to your owner’s manual for specific directions. Take note of the installation date on your calendar before installing the new filter."
+        },
+        {
+          "step_no": 4,
+          "text": "If your filter is damaged or clogged, or if you have exceeded the manufacturers’ recommended guidelines, you will need areplacement ice and water filter."
+        },
+        {
+          "step_no": 5,
+          "text": "After disconnecting the water supply and unplugging your refrigerator, remove the rear access panel and locate the water inlet valve. It is usually found near the bottom of the fridge."
+        },
+        {
+          "step_no": 6,
+          "text": "Begin by inspecting all the tubing, and their respective connections, for leaks, damage, wear, abrasions, or brittle tubing."
+        },
+        {
+          "step_no": 7,
+          "text": "If you do not locate the source of the leak in the above checks, remove the water inlet valve to test it."
+        },
+        {
+          "step_no": 8,
+          "text": "With a multi-meter in Rx1 mode, touch the terminals with the probes to test for continuity. A functional water inlet valve should put off a reading of 200 to 500 ohms."
+        },
+        {
+          "step_no": 9,
+          "text": "If you receive any other reading, you need areplacement water inlet valve."
+        },
+        {
+          "step_no": 10,
+          "text": "Unplug your appliance and turn off the water supply to the refrigerator."
+        },
+        {
+          "step_no": 11,
+          "text": "Remove the control panel cover and verify that the actuator contacts the dispenser switch properly and if not, check the actuator housing bracket, switch mounting bracket and the actuator pivot itself."
+        },
+        {
+          "step_no": 12,
+          "text": "If you find any issues, you may need areplacement water dispenser actuator. If the actuator is contacting the switch, you will need to check the switch or control board for the source of the problem."
+        },
+        {
+          "step_no": 13,
+          "text": "Disconnect the refrigerator from the power source and turn off the water supply before beginning."
+        },
+        {
+          "step_no": 14,
+          "text": "Remove the control panel of your refrigerator to locate the switch. It will be found behind the pad or lever that is pressed to dispense water."
+        },
+        {
+          "step_no": 15,
+          "text": "After removing the switch, set your multi-meter to the Rx1 setting to test your switch for continuity. You should receive a reading of 200 to 500 ohms."
+        },
+        {
+          "step_no": 16,
+          "text": "If you receive any other reading, you need areplacement micro switch."
+        },
+        {
+          "step_no": 17,
+          "text": "Begin by turning off the water supply and unplugging your refrigerator."
+        },
+        {
+          "step_no": 18,
+          "text": "The dispenser control board is usually located on the freezer door and it’s where you select all the settings for your refrigerator."
+        },
+        {
+          "step_no": 19,
+          "text": "Remove the frame holding the control board in place, using caution to not break or crack the frame as your remove it."
+        },
+        {
+          "step_no": 20,
+          "text": "Inspect the dispenser control board for any signs of damage, wear, burning, or shorted connections."
+        },
+        {
+          "step_no": 21,
+          "text": "If you find any of the above issues, you will need areplacement dispenser control board."
+        }
+      ],
+      "all_ps_numbers": [],
+      "source_url": "https://www.partselect.com/Repair/Refrigerator/Not-Dispensing-Water/"
+    },
+    {
+      "id": "repair_0006",
+      "source_type": "repair_symptom",
+      "appliance_type": "refrigerator",
+      "symptom_name": "Fridge and Freezer Too Warm",
+      "symptom_slug": "Refrigerator-Freezer-Too-Warm",
+      "title": "How To Fix A Refrigerator and Freezer That's Too Warm",
+      "difficulty": "complex",
+      "repair_story": "Click a Part Below to Start Your Repair:Cold Control Or Temperature ControlEvaporator Fan MotorElectronic Control BoardTemperature Sensor Or ThermistorDefrost TimerDefrost ThermostatDefrost HeaterCondenser Fan MotorAbout this repair:Rated as EASY785 repair stories15 step by step videos",
+      "video": null,
+      "related_parts": [],
+      "inspection_steps": [
+        {
+          "step_no": 1,
+          "text": "Unplug your refrigerator before beginning, then open your refrigerator door and locate the control. It will be located behind the temperature adjustment knob and is usually found in the fresh food section control panel."
+        },
+        {
+          "step_no": 2,
+          "text": "After removing the control from the appliance, turn the control to the warmest setting, set your multi-meter to the Rx1 setting and touch the probes to the terminals"
+        },
+        {
+          "step_no": 3,
+          "text": "You are testing for continuity and you should receive a reading of infinity. With the probes still touching the terminals, adjust the control to higher (colder) and higher settings. Your reading should change to zero, indicating that you have continuity."
+        },
+        {
+          "step_no": 4,
+          "text": "If your control fails either of the tests above, you will need areplacement cold control & temperature control."
+        },
+        {
+          "step_no": 5,
+          "text": "Disconnect your refrigerator from the power source and remove the evaporator fan cover, which will be found in the freezer compartment."
+        },
+        {
+          "step_no": 6,
+          "text": "The motor shaft should turn freely with minimal resistance, attempt to turn the shaft manually to check for any resistance."
+        },
+        {
+          "step_no": 7,
+          "text": "If there is a significant amount of ice on the motor, defrost your freezer and see if that resolves the issue. You should also inspect the motor for any signs of wear or damage."
+        },
+        {
+          "step_no": 8,
+          "text": "If you cannot turn it easily, or if it is noticeably worn, you need areplacement evaporator fan motor."
+        },
+        {
+          "step_no": 9,
+          "text": "Unplug your fridge before beginning as you will be handling electrical components."
+        },
+        {
+          "step_no": 10,
+          "text": "Locate and remove the electronic control board from your appliance. It is inside of the refrigerator, inside of the control box, which is usually found attached to the top or side of the fridge."
+        },
+        {
+          "step_no": 11,
+          "text": "Inspect your control board for any signs of damaged foil, wear, burnt connections, arcing, or any other damage."
+        },
+        {
+          "step_no": 12,
+          "text": "If you find any of the above, you need areplacement electronic control board."
+        },
+        {
+          "step_no": 13,
+          "text": "Begin by unplugging your refrigerator, then remove the back panel of your refrigerator to locate the main control board."
+        },
+        {
+          "step_no": 14,
+          "text": "The thermistor(s) will be connected to the main control board. Remove the thermistor(s) from the appliance in order to test them."
+        },
+        {
+          "step_no": 15,
+          "text": "Before testing them, you will need to place the thermistor(s) in ice water for 5 minutes in order to bring the temperature to 32 degrees F. The thermistor(s) will produce different readings at different temperatures, and the suggested ranges below only apply to thermistors at a temperature of 32 degrees F."
+        },
+        {
+          "step_no": 16,
+          "text": "With the probes on the terminals and your multi-meter set to Rx1, you should receive a reading of 16,600 ohms (+/- 5 percent)."
+        },
+        {
+          "step_no": 17,
+          "text": "If you receive a reading outside this range, you will need areplacement temperature sensor or thermistor."
+        },
+        {
+          "step_no": 18,
+          "text": "Disconnect your appliance from the power source and locate your defrost timer. It can be located behind the refrigerator's lower kickplate, in the refrigerator's control panel, or even behind the refrigerator on its back wall."
+        },
+        {
+          "step_no": 19,
+          "text": "After locating it, remove the defrost timer from the appliance in order to test it"
+        },
+        {
+          "step_no": 20,
+          "text": "Using a multi-meter on the Rx1 setting, with one probe touching the common terminal (it should be labeled \"3\" or \"C\"), touch the other lead to the other three remaining terminals, one at a time. Testing the first pair should produce a reading of zero, or near zero, denoting continuity. The second pair may also result in a reading of zero or near zero. Testing the third pair of terminals should produce a reading of infinity."
+        },
+        {
+          "step_no": 21,
+          "text": "If you do not receive these readings, you will need areplacement defrost timer."
+        },
+        {
+          "step_no": 22,
+          "text": "Unplug your refrigerator and locate your refrigerator's defrost thermostat. In freezer-on-top models, it may be located under the floor of the unit, or it could be found at the back of the freezer. If you have a side-by-side refrigerator, the defrost thermostat is found at the back of the freezer side."
+        },
+        {
+          "step_no": 23,
+          "text": "Once you have located it, remove the defrost thermostat in order to test it. You will have to remove any objects that are in your way such as the contents of the freezer, freezer shelves, icemaker parts, and the inside rear, back, or bottom panel."
+        },
+        {
+          "step_no": 24,
+          "text": "Set your multi-meter to the Rx1 setting. Place each of the probes on a thermostat wire. When your thermostat is cold, it should produce a reading of zero on your multi-meter. If it is warm (anywhere from forty to ninety degrees Fahrenheit), then this test should produce a reading of infinity."
+        },
+        {
+          "step_no": 25,
+          "text": "If the results you receive from your test differ from the ones presented here, then you will need areplacement defrost thermostat."
+        },
+        {
+          "step_no": 26,
+          "text": "Ensure that you have disconnected your appliance from the power source before beginning."
+        },
+        {
+          "step_no": 27,
+          "text": "Locate your defrost heater. It can be located behind the back panel of the freezer section of your refrigerator, or under the floor of your refrigerator's freezer section. Defrost heaters are commonly located beneath a refrigerator's evaporator coils. You will have to remove any objects that are in your way such as the contents of the freezer, freezer shelves, icemaker parts, and the inside rear, back, or bottom panel."
+        },
+        {
+          "step_no": 28,
+          "text": "Before you can test your defrost heater, you must remove it from your refrigerator. A defrost heater is connected by two wires, and the wires are connected with slip-on connectors. Firmly grasp these connectors and pull them off the terminals. You may need a pair of needle-nosed pliers to help you. Do not pull on the wires themselves."
+        },
+        {
+          "step_no": 29,
+          "text": "Use your multi-meter to test the heater for continuity. Set your multi-meter to the Rx1 scale and place the tester's leads on one terminal each. This should produce a reading anywhere in between zero and infinity."
+        },
+        {
+          "step_no": 30,
+          "text": "If you receive a reading of zero or infinity, you will need areplacement defrost heater."
+        },
+        {
+          "step_no": 31,
+          "text": "Begin by unplugging your refrigerator from the power source and then remove the rear access panel to locate the condenser fan motor, it is usually found at the bottom rear of the appliance."
+        },
+        {
+          "step_no": 32,
+          "text": "Once you have located it, Look for any debris or obstructions that could be preventing the fan from moving freely. You should also inspect the condenser fan motor for any signs of wear or damage.."
+        },
+        {
+          "step_no": 33,
+          "text": "If the fan motor is seized or worn, you will need areplacement condenser fan motor."
+        }
+      ],
+      "all_ps_numbers": [],
+      "source_url": "https://www.partselect.com/Repair/Refrigerator/Refrigerator-Freezer-Too-Warm/"
+    },
+    {
+      "id": "repair_0007",
+      "source_type": "repair_symptom",
+      "appliance_type": "refrigerator",
+      "symptom_name": "Door Sweating",
+      "symptom_slug": "Door-Sweating",
+      "title": "How To Fix A Refrigerator Door That's Sweating",
+      "difficulty": "hard",
+      "repair_story": "Click a Part Below to Start Your Repair:Fresh Food & Freezer Door GasketDispenser Door Assembly or Flapper & Ice Door KitDoor Closure Cam KitDoor Hinge & BearingAbout this repair:Rated as EASY769 repair stories11 step by step videos",
+      "video": null,
+      "related_parts": [],
+      "inspection_steps": [
+        {
+          "step_no": 1,
+          "text": "Take a piece of paper, and place it at various points along the door."
+        },
+        {
+          "step_no": 2,
+          "text": "Close the door normally and slide the paper out."
+        },
+        {
+          "step_no": 3,
+          "text": "If the paper slides out without any resistance, then you will needreplacement fresh food & freezer door gasket(s)."
+        },
+        {
+          "step_no": 4,
+          "text": "Remove the dispenser cover in order to inspect its components."
+        },
+        {
+          "step_no": 5,
+          "text": "You should inspect the following parts for damage or wear."
+        },
+        {
+          "step_no": 6,
+          "text": "Door hinges."
+        },
+        {
+          "step_no": 8,
+          "text": "Door pivot mechanism."
+        },
+        {
+          "step_no": 9,
+          "text": "Return spring."
+        },
+        {
+          "step_no": 10,
+          "text": "Solenoid plunger and linkage."
+        },
+        {
+          "step_no": 12,
+          "text": "If you find any issues while checking the above parts, you may need areplacement dispenser door assembly or flapper & ice door kit."
+        },
+        {
+          "step_no": 13,
+          "text": "Open your refrigerator door and locate the closer cams."
+        },
+        {
+          "step_no": 14,
+          "text": "Visually inspect the closer cams to verify that they are not cracked, worn, or otherwise damaged."
+        },
+        {
+          "step_no": 15,
+          "text": "If they are damaged, you will need areplacement closure cam kit."
+        },
+        {
+          "step_no": 16,
+          "text": "Open and remove your refrigerator door in order to locate the hinge & bearing."
+        },
+        {
+          "step_no": 17,
+          "text": "Inspect the hinges for any signs of cracking or damage. If they are not damaged, lubricate the hinges with a food safe grease to see if that resolves the issue."
+        },
+        {
+          "step_no": 18,
+          "text": "If they are damaged or greasing the hinges does not solve the issue, you needreplacement door hinges & bearings."
+        }
+      ],
+      "all_ps_numbers": [],
+      "source_url": "https://www.partselect.com/Repair/Refrigerator/Door-Sweating/"
+    },
+    {
+      "id": "repair_0008",
+      "source_type": "repair_symptom",
+      "appliance_type": "refrigerator",
+      "symptom_name": "Light Not Working",
+      "symptom_slug": "Light-Not-Working",
+      "title": "How To Fix A Refrigerator Light That's Not Working",
+      "difficulty": "Unknown",
+      "repair_story": "Click a Part Below to Start Your Repair:Light Bulb Or LampLight SocketsDoor Light SwitchLight Bulb & Ice DispenserAbout this repair:Rated as REALLY EASY582 repair stories23 step by step videos",
+      "video": null,
+      "related_parts": [],
+      "inspection_steps": [
+        {
+          "step_no": 1,
+          "text": "Remove the bulb from the refrigerator."
+        },
+        {
+          "step_no": 2,
+          "text": "Set your multi-meter to the Rx1 setting."
+        },
+        {
+          "step_no": 3,
+          "text": "Place one probe on the bottom of the lightbulb, and place the other on the threading of the bulb."
+        },
+        {
+          "step_no": 4,
+          "text": "If you receive a reading of infinity, you need areplacement lightbulb."
+        },
+        {
+          "step_no": 5,
+          "text": "Unplug your refrigerator before close inspection of the socket as this is a live voltage circuit."
+        },
+        {
+          "step_no": 6,
+          "text": "Inspect the socket for discolored terminals or heat damaged sockets that may prevent good connectivity to the light bulb or lamp."
+        },
+        {
+          "step_no": 7,
+          "text": "If you find either of the above, you need areplacement light socket."
+        },
+        {
+          "step_no": 8,
+          "text": "Unplug your refrigerator and locate your door light switch. The location of the switch varies depending on the model of your refrigerator, but it is usually located somewhere near the top of the door opening. The switch is often mounted into the interior plastic liner and care should be taken when removing it to prevent damage to the liner."
+        },
+        {
+          "step_no": 9,
+          "text": "Remove the switch in order to test it."
+        },
+        {
+          "step_no": 10,
+          "text": "Set your multi-meter to the Rx1 setting to test the switch for continuity and place the probes on the switch’s terminals. The multi-meter reading should change from infinity to a reading of zero. Keep the leads touching the terminals and press in on the switch. The reading should change back to infinity."
+        },
+        {
+          "step_no": 11,
+          "text": "If the results you receive are not consistent with these results, you need areplacement door switch."
+        },
+        {
+          "step_no": 12,
+          "text": "Disconnect your refrigerator from the power source before beginning."
+        },
+        {
+          "step_no": 13,
+          "text": "Locate and remove your control panel cover to access the on/off switch."
+        },
+        {
+          "step_no": 14,
+          "text": "Remove the on/off switch from the appliance in order to test it."
+        },
+        {
+          "step_no": 15,
+          "text": "Set your multi-meter to the Rx1 setting and place the probes on the switch’s terminals. You should receive a reading of zero. With the probes still on the terminals press in on the switch, the reading should change to infinity."
+        },
+        {
+          "step_no": 16,
+          "text": "If your tests produce results different from those above, you will need areplacement dispenser door switch."
+        }
+      ],
+      "all_ps_numbers": [],
+      "source_url": "https://www.partselect.com/Repair/Refrigerator/Light-Not-Working/"
+    },
+    {
+      "id": "repair_0009",
+      "source_type": "repair_symptom",
+      "appliance_type": "refrigerator",
+      "symptom_name": "Fridge Too Cold",
+      "symptom_slug": "Refrigerator-Too-Cold",
+      "title": "How To Fix A Refrigerator That's Too Cold",
+      "difficulty": "Unknown",
+      "repair_story": "Click a Part Below to Start Your Repair:Air Inlet Damper Or BaffleTemperature Sensor Or ThermistorMain Control BoardCold Control Or Temperature ControlAbout this repair:Rated as REALLY EASY257 repair stories2 step by step videos",
+      "video": null,
+      "related_parts": [],
+      "inspection_steps": [
+        {
+          "step_no": 1,
+          "text": "Unplug your refrigerator and locate the damper or baffle. It is usually found where the cold air enters the fresh food compartment."
+        },
+        {
+          "step_no": 2,
+          "text": "Use caution when inspecting the baffle or damper to not damage the plastic & Styrofoam housing that the baffle or damper is encased in.If your model of has a temperature sensing bulb attached to this control make sure that the sensing bulb is in the correct position and not damaged.The control knob should move freely, try to move it to verify that the linkage is intact and that it moves freely.If the damper/baffle is stuck in the closed or nearly closed position or does not move freely, then you need areplacement air inlet damper or baffle."
+        },
+        {
+          "step_no": 3,
+          "text": "If your model of has a temperature sensing bulb attached to this control make sure that the sensing bulb is in the correct position and not damaged."
+        },
+        {
+          "step_no": 4,
+          "text": "The control knob should move freely, try to move it to verify that the linkage is intact and that it moves freely."
+        },
+        {
+          "step_no": 5,
+          "text": "If the damper/baffle is stuck in the closed or nearly closed position or does not move freely, then you need areplacement air inlet damper or baffle."
+        },
+        {
+          "step_no": 6,
+          "text": "Verify that you have disconnected your appliance from the power source as you will be inspecting electrical components."
+        },
+        {
+          "step_no": 7,
+          "text": "The thermistor(s) will be connected to the main control board, you will need to remove the back panel of your fridge to access the control board. Remove the thermistor(s) from the appliance in order to test them."
+        },
+        {
+          "step_no": 8,
+          "text": "Thermistor(s) will produce different multi-meter readings based on their temperature when you test them. The ranges below only apply to thermistors at 32 degrees F. Before testing them, you will need to place the thermistor(s) in ice water for 5 minutes to bring the temperature to 32 degrees F."
+        },
+        {
+          "step_no": 9,
+          "text": "Set your multi-meter to the Rx1 setting and touch the probes to the terminals, you should receive a reading of 16,600 ohms (+/- 5 percent)."
+        },
+        {
+          "step_no": 10,
+          "text": "If you receive a reading outside this range, you will need areplacement temperature sensor or thermistor."
+        },
+        {
+          "step_no": 11,
+          "text": "Disconnect your refrigerator from the power source, you will be inspecting electrical components."
+        },
+        {
+          "step_no": 12,
+          "text": "The main control board is usually found inside the control box, which is inside the fridge, attached to the top or side of the fridge. Locate and remove the main control board from your appliance."
+        },
+        {
+          "step_no": 13,
+          "text": "Looking for any signs of damaged foil, wear, burnt connections, arcing, or any other damage, inspect your main control board."
+        },
+        {
+          "step_no": 14,
+          "text": "If you find any of the above, you need areplacement main control board."
+        },
+        {
+          "step_no": 15,
+          "text": "You will be handling electrical components, ensure you have disconnected the power source from your appliance before beginning. Begin by locating your control, it will be inside the fridge, usually in the fresh food section control panel, likely located directly behind the temperature adjustment knob."
+        },
+        {
+          "step_no": 16,
+          "text": "After locating it, remove the control from the fridge, set the control to the lowest (warmest) setting, place your multi-meter on the Rx1 setting, and touch the probes to the terminals to test for continuity. You should receive a reading of infinity."
+        },
+        {
+          "step_no": 17,
+          "text": "While still touching the terminals with the probes, change the control to a colder (higher) setting. This should change the reading from infinity to zero."
+        },
+        {
+          "step_no": 18,
+          "text": "If your control fails either of the tests above, you will need areplacement cold control & temperature control."
+        }
+      ],
+      "all_ps_numbers": [],
+      "source_url": "https://www.partselect.com/Repair/Refrigerator/Refrigerator-Too-Cold/"
+    },
+    {
+      "id": "repair_0010",
+      "source_type": "repair_symptom",
+      "appliance_type": "refrigerator",
+      "symptom_name": "Freezer Too Cold",
+      "symptom_slug": "Freezer-Too-Cold",
+      "title": "How To Fix A Refrigerator Freezer That's Too Cold",
+      "difficulty": "Unknown",
+      "repair_story": "Click a Part Below to Start Your Repair:Air Damper Or Freezer ControlTemperature Sensor Or ThermistorAbout this repair:Rated as REALLY EASY44 repair stories1 step by step video",
+      "video": null,
+      "related_parts": [],
+      "inspection_steps": [
+        {
+          "step_no": 1,
+          "text": "Unplug your refrigerator before beginning."
+        },
+        {
+          "step_no": 2,
+          "text": "Locate your air damper or freezer control. It will usually be found in the fresh food compartment, behind a vent found on the top or side of the fridge."
+        },
+        {
+          "step_no": 3,
+          "text": "Remove the vent and inspect the damper flap for any signs of wear or damage, attempt to manually move the flap. You should feel little or no resistance."
+        },
+        {
+          "step_no": 4,
+          "text": "If you find any issues when performing the above checks, you will need areplacement air damper or freezer control. If you do not find the issue, suspect the evaporator coils or motor."
+        },
+        {
+          "step_no": 5,
+          "text": "Disconnect your refrigerator from the power source and then remove the back panel of your refrigerator to locate the main control board."
+        },
+        {
+          "step_no": 6,
+          "text": "Locate and remove the thermistor(s), they will be attached to the main control board."
+        },
+        {
+          "step_no": 7,
+          "text": "Place the thermistor(s) in ice water for 5 minutes before testing. The amount of resistance in a thermistor varies based on what their surface temperature is when they are measured. The range below only applies to thermistors measured at 32 degrees F."
+        },
+        {
+          "step_no": 8,
+          "text": "Using a multi-meter on Rx1 mode, touch the terminals with the meter’s probes. The test should produce a reading of 16,600 ohms (+/- 5 percent)."
+        },
+        {
+          "step_no": 9,
+          "text": "If you receive a reading outside this range, you will need areplacement temperature sensor or thermistor."
+        }
+      ],
+      "all_ps_numbers": [],
+      "source_url": "https://www.partselect.com/Repair/Refrigerator/Freezer-Too-Cold/"
+    },
+    {
+      "id": "repair_0011",
+      "source_type": "repair_symptom",
+      "appliance_type": "dishwasher",
+      "symptom_name": "Noisy",
+      "symptom_slug": "Noisy",
+      "title": "How To Fix A Noisy Dishwasher",
+      "difficulty": "Unknown",
+      "repair_story": "Click a Part Below to Start Your Repair:PumpWash Arm Bearing Ring & Spray Arm SealSpray ArmsAbout this repair:Rated as REALLY EASY989 repair stories10 step by step videos",
+      "video": null,
+      "related_parts": [],
+      "inspection_steps": [
+        {
+          "step_no": 1,
+          "text": "Unplug your dishwasher before beginning this test; you will be handling electrical components."
+        },
+        {
+          "step_no": 2,
+          "text": "Remove the pump in order to test it. The pump is usually found behind the lower access panel."
+        },
+        {
+          "step_no": 3,
+          "text": "Using a multimeter on Rx1, place the probes onto the terminals to test for continuity. You should receive a reading of zero or nearly zero. To test the ground connection, with one probe still on a terminal, touch the other probe to the bare metal housing of the pump. You should not receive any reading from this test."
+        },
+        {
+          "step_no": 4,
+          "text": "If your test results do not match those above, you will need areplacement pump."
+        },
+        {
+          "step_no": 5,
+          "text": "While you will not be disassembling your appliance, we still recommend unplugging your appliance before beginning."
+        },
+        {
+          "step_no": 6,
+          "text": "Locate your wash arm bearing ring & spray arm seal. They will be found attached to the spray/wash arms."
+        },
+        {
+          "step_no": 7,
+          "text": "Visually inspect them for signs of wear, cracking, or damage. You may need to remove the spray/wash arms to fully inspect them, depending on your model."
+        },
+        {
+          "step_no": 8,
+          "text": "If you find signs of the above symptoms, you will needreplacement wash arm bearing ringsand/orspray arm seals."
+        },
+        {
+          "step_no": 9,
+          "text": "For safety, disconnect the power from your appliance before beginning."
+        },
+        {
+          "step_no": 10,
+          "text": "Manually spin your spray arms to ensure they are not hitting the racks and are turning freely. The spray arms should not be wobbly."
+        },
+        {
+          "step_no": 11,
+          "text": "Visually inspect your spray arms for any signs of wear, cracking, or damage."
+        },
+        {
+          "step_no": 12,
+          "text": "If you find any issues while performing the checks above, you will needreplacement spray arms."
+        }
+      ],
+      "all_ps_numbers": [],
+      "source_url": "https://www.partselect.com/Repair/Dishwasher/Noisy/"
+    },
+    {
+      "id": "repair_0012",
+      "source_type": "repair_symptom",
+      "appliance_type": "dishwasher",
+      "symptom_name": "Leaking",
+      "symptom_slug": "Leaking",
+      "title": "How To Repair A Leaking Dishwasher",
+      "difficulty": "Unknown",
+      "repair_story": "Click a Part Below to Start Your Repair:PumpDoor GasketWater Inlet ValveDispensers & GrommetsSpray ArmFloat & Float SwitchHose Clamps & HosesAbout this repair:Rated as EASY1324 repair stories6 step by step videos",
+      "video": null,
+      "related_parts": [],
+      "inspection_steps": [
+        {
+          "step_no": 1,
+          "text": "Disconnect the power from your appliance before beginning."
+        },
+        {
+          "step_no": 2,
+          "text": "On most models, the pump will be found behind the lower access panel. Locate and remove your dishwasher pump in order to test it."
+        },
+        {
+          "step_no": 3,
+          "text": "To test for continuity, set your multimeter to Rx1 and touch the terminals with the probes. This test should produce a reading of exactly or nearly zero. You should also check the ground connection of the pump. To do this, leave one probe on the terminal and touch the other to the bare metal housing of the pump. This test should not produce any reading."
+        },
+        {
+          "step_no": 4,
+          "text": "If your readings differ from the results above, you will need areplacement pump."
+        },
+        {
+          "step_no": 5,
+          "text": "Open your dishwasher door to locate the door gasket, and baffles if applicable."
+        },
+        {
+          "step_no": 6,
+          "text": "Visually inspect the gasket for any signs of wearing, damage, missing pieces, or misalignment."
+        },
+        {
+          "step_no": 7,
+          "text": "If you find any of the above, you will need areplacement door gasket."
+        },
+        {
+          "step_no": 8,
+          "text": "Similar to most other inspections, begin by disconnecting your appliance from both the power and the water source."
+        },
+        {
+          "step_no": 9,
+          "text": "In order to access the water inlet valve, you will need to remove the lower access panel of your appliance. The valve will likely be located on the left side."
+        },
+        {
+          "step_no": 10,
+          "text": "Begin by inspecting the body of the valve. You are looking for any signs of cracking, damage, wear, or any other indication of a leak."
+        },
+        {
+          "step_no": 11,
+          "text": "If you find any of the above, you will need areplacement water inlet valve."
+        },
+        {
+          "step_no": 12,
+          "text": "For safety, unplug your dishwasher before beginning."
+        },
+        {
+          "step_no": 13,
+          "text": "Open the dishwasher door to visually inspect the dispenser."
+        },
+        {
+          "step_no": 14,
+          "text": "First, inspect the lever for cracking or damage, a broken lever would prevent the dispenser from opening or closing properly. Next, inspect the dispenser cover for any wear or damage. Finally, inspect the container itself for cracks or other damage."
+        },
+        {
+          "step_no": 15,
+          "text": "If you find any issues while performing the inspections above, you will need areplacement dispenser."
+        },
+        {
+          "step_no": 16,
+          "text": "While not crucial, we recommend you unplug your dishwasher before starting this inspection."
+        },
+        {
+          "step_no": 17,
+          "text": "Begin by inspecting the arms for any signs of cracking, wear, or any other damage."
+        },
+        {
+          "step_no": 18,
+          "text": "Next, manually spin the spray arms. You should be feeling to see if there is any resistance, if they are wobbling, or if they hit the dish racks. Additionally, inspect to see if any of the holes in the arms are clogged, clear out anything you may find."
+        },
+        {
+          "step_no": 19,
+          "text": "If you find any of the issues described above, you will needreplacement spray arms."
+        },
+        {
+          "step_no": 20,
+          "text": "Disconnect your dishwasher from the power source as well as the water supply."
+        },
+        {
+          "step_no": 21,
+          "text": "The float switch will be found inside your dishwasher’s tub; you will need to remove the lower access panel to access it. The switch is usually located directly below the float assembly, once you have located it, remove it in order to test it."
+        },
+        {
+          "step_no": 22,
+          "text": "Using a multimeter set to Rx1, touch the switch’s terminals with the probes to test for continuity. You should receive a reading of zero or infinity. With the probes still touching the terminals, press in on the switch’s button, this should change it to the opposite extreme (from zero to infinity, or infinity to zero)."
+        },
+        {
+          "step_no": 23,
+          "text": "If your test results differ from those above, you will need areplacement float switch."
+        },
+        {
+          "step_no": 24,
+          "text": "Disconnect the water supply as well as the power source from your appliance before beginning."
+        },
+        {
+          "step_no": 25,
+          "text": "The hoses are usually found behind the lower access panel (or kickplate). You will need to remove this in order to locate them."
+        },
+        {
+          "step_no": 26,
+          "text": "You will be checking two hoses, both of which are connected to a pump below the lower spray arm: The drain hose and the recirculation hose. Remove both hoses in order to inspect them."
+        },
+        {
+          "step_no": 27,
+          "text": "Visually inspect the hoses for any signs or wear, cracking, or damage. Attempt to run water through each to identify if there is a blockage inside the hose."
+        },
+        {
+          "step_no": 28,
+          "text": "If you find any issues while performing the inspection above, you will need areplacement hose."
+        }
+      ],
+      "all_ps_numbers": [],
+      "source_url": "https://www.partselect.com/Repair/Dishwasher/Leaking/"
+    },
+    {
+      "id": "repair_0013",
+      "source_type": "repair_symptom",
+      "appliance_type": "dishwasher",
+      "symptom_name": "Will Not Start",
+      "symptom_slug": "Will-Not-Start",
+      "title": "How to Fix a Dishwasher That Won’t Start",
+      "difficulty": "Unknown",
+      "repair_story": "Click a Part Below to Start Your Repair:Door Latch Or Door Latch SwitchTimer Or Electronic ControlSelector SwitchMotor Start RelayThermal FuseDrive MotorAbout this repair:Rated as EASY1817 repair stories7 step by step videos",
+      "video": null,
+      "related_parts": [],
+      "inspection_steps": [
+        {
+          "step_no": 1,
+          "text": "Disconnect your appliance from the power source before beginning."
+        },
+        {
+          "step_no": 2,
+          "text": "Begin by removing the inner door panel to gain access to the door latch assembly. It is usually found at the top of the door. Once you have located it, verify that the door catch activates the door latch switches by inserting the catch into the assembly."
+        },
+        {
+          "step_no": 3,
+          "text": "If the switches are being activated mechanically, remove the switches to check them for continuity. Using a multimeter on Rx1, touch the probes to the switch’s terminals. This should produce a reading of zero or nearly zero."
+        },
+        {
+          "step_no": 4,
+          "text": "If you receive a different reading, you will need areplacement door latch assembly."
+        },
+        {
+          "step_no": 5,
+          "text": "Disconnect your appliance from the power source."
+        },
+        {
+          "step_no": 6,
+          "text": "Locate and remove the timer. It will most likely be found in the control panel, but it is also often found behind the lower kick plate."
+        },
+        {
+          "step_no": 7,
+          "text": "Some timers may have multiple sets of contacts/wires, if this is true for your model, you will need to refer to your wiring diagram to determine which contacts to test."
+        },
+        {
+          "step_no": 8,
+          "text": "Set your multimeter to Rx1000 and touch the contacts with the probes. Most functioning timers will fall in the range of 2000-3500 ohms of resistance, but this varies between models. Refer to your owner's manual to determine what reading your test should produce."
+        },
+        {
+          "step_no": 9,
+          "text": "If your test results differ from the manufacturer's recommendations, you will need areplacement timer."
+        },
+        {
+          "step_no": 10,
+          "text": "Begin by disconnecting your appliance from the power source."
+        },
+        {
+          "step_no": 11,
+          "text": "Remove the inner door panel of your dishwasher in order to locate the selector switch. It most likely will be found on the control panel. Once you have located it, ensure that the switch is properly depressed. If it is, remove it from the appliance in order to test it."
+        },
+        {
+          "step_no": 12,
+          "text": "Using a multimeter set to Rx1, touch the probes to the terminals of the switch, you will need to test each button individually. This should produce a reading of infinity. Next, with the probes still on the terminals, press in on the button of the terminals you are testing. This should change your reading to zero. Repeat this test for all other buttons."
+        },
+        {
+          "step_no": 13,
+          "text": "If any of your readings do not match the results above, you will need areplacement selector switch."
+        },
+        {
+          "step_no": 14,
+          "text": "Ensure that you have unplugged your dishwasher before beginning."
+        },
+        {
+          "step_no": 15,
+          "text": "The motor start relay is normally located next to the pump. Remove the lower access panel of your dishwasher in order to locate the motor start relay. Once you have found it, remove it in order to test it."
+        },
+        {
+          "step_no": 16,
+          "text": "After referring to your wiring diagram, set your multimeter to Rx1 and begin by testing the coil portion of the relay for continuity. This test should produce a reading of zero or nearly zero. Next, you will need to manually activate the relay by turning it upside down and allowing the plunger to drop. Once it is activated, touch the probes to the terminals of the relay. This test should also produce a reading of zero or nearly zero."
+        },
+        {
+          "step_no": 17,
+          "text": "If your test results differ from those above, you will need areplacement motor start relay."
+        },
+        {
+          "step_no": 18,
+          "text": "Unplug your appliance before beginning this test, you will be handling electrical components."
+        },
+        {
+          "step_no": 19,
+          "text": "Remove the inner door of your dishwasher in order to access the control panel. The thermal fuse will be attached to the control panel by 2 wires, carefully disconnect these wires and remove the thermal fuse in order to test it."
+        },
+        {
+          "step_no": 20,
+          "text": "With a multimeter set to Rx1, touch the fuse’s contacts with the probes. You are testing for continuity and should receive a reading of zero or nearly zero."
+        },
+        {
+          "step_no": 21,
+          "text": "If you do not receive this reading, you will need areplacement thermal fuse."
+        },
+        {
+          "step_no": 22,
+          "text": "Before starting, ensure that you have disconnected your dishwasher from the power source."
+        },
+        {
+          "step_no": 23,
+          "text": "Remove the lower access panel of your appliance in order to locate the drive motor. Once you have located it, carefully disconnect the wires attached to it and remove it in order to test it for continuity."
+        },
+        {
+          "step_no": 24,
+          "text": "With the motor removed from the appliance, set your multimeter to Rx1 and touch the probes to the motor’s terminals. A functional drive motor will produce a reading of zero or nearly zero. Next, test the ground connection by moving one of the probes to the bare metal housing of the motor. This test should not produce any reading."
+        },
+        {
+          "step_no": 25,
+          "text": "If either of your tests produces different readings, you will need areplacement drive motor."
+        }
+      ],
+      "all_ps_numbers": [],
+      "source_url": "https://www.partselect.com/Repair/Dishwasher/Will-Not-Start/"
+    },
+    {
+      "id": "repair_0014",
+      "source_type": "repair_symptom",
+      "appliance_type": "dishwasher",
+      "symptom_name": "Door Latch Failure",
+      "symptom_slug": "Door-Latch-Failure",
+      "title": "How To Fix A Broken Dishwasher Door Latch",
+      "difficulty": "Unknown",
+      "repair_story": "Click a Part Below to Start Your Repair:Door Latch AssemblyAbout this repair:Rated as REALLY EASY1239 repair stories4 step by step videos",
+      "video": null,
+      "related_parts": [],
+      "inspection_steps": [
+        {
+          "step_no": 1,
+          "text": "Verify that you have unplugged your dishwasher before beginning."
+        },
+        {
+          "step_no": 2,
+          "text": "The door latch assembly is most often found inside the inner door panel, near the top of the door. Remove your inner door panel and locate the door latch assembly."
+        },
+        {
+          "step_no": 3,
+          "text": "Inspect the door catch to verify that it is mechanically activating the switches. If it is, remove the switches in order to test them for continuity."
+        },
+        {
+          "step_no": 4,
+          "text": "Set your multimeter to Rx1 and touch the terminals with the probes. You are testing for continuity and should receive a reading of exactly or nearly zero."
+        },
+        {
+          "step_no": 5,
+          "text": "If your test produces any other reading, you will need areplacement door latch assembly."
+        }
+      ],
+      "all_ps_numbers": [],
+      "source_url": "https://www.partselect.com/Repair/Dishwasher/Door-Latch-Failure/"
+    },
+    {
+      "id": "repair_0015",
+      "source_type": "repair_symptom",
+      "appliance_type": "dishwasher",
+      "symptom_name": "Not Cleaning Dishes",
+      "symptom_slug": "Not-Cleaning-Properly",
+      "title": "How To Fix Dishwasher That Won't Clean Properly",
+      "difficulty": "Hard",
+      "repair_story": "Click a Part Below to Start Your Repair:Upper Discharge Housing GasketSpray ArmDocking StationChopperWater Inlet ValveWater Delivery TubeFiltersWash SpinnerDetergent DispenserHeating ElementPump ImpellersAbout this repair:Rated as EASY2543 repair stories38 step by step videos",
+      "video": null,
+      "related_parts": [],
+      "inspection_steps": [
+        {
+          "step_no": 1,
+          "text": "For safety, unplug your dishwasher before starting this repair."
+        },
+        {
+          "step_no": 2,
+          "text": "This housing gasket is located on the discharge cover above the circulation impeller. The gasket may have just come loose, or it may need to be replaced altogether. Locate your gasket in order to inspect it."
+        },
+        {
+          "step_no": 3,
+          "text": "Inspect the gasket for any signs of wear, damage, cracking, missing chunks, and if it is properly attached. If it is loose, ensure that there is no debris that is preventing a proper seal and then reattach it."
+        },
+        {
+          "step_no": 4,
+          "text": "If you find your housing gasket is damaged or worn, you will need areplacement upper discharge housing gasket."
+        },
+        {
+          "step_no": 5,
+          "text": "Disconnect the appliance from the power source before beginning."
+        },
+        {
+          "step_no": 6,
+          "text": "Open your dishwasher and visually inspect your spray arms. You are looking for any signs of wear, cracking, or damage. Inspect the holes of the arms to see if any dirt or debris is lodged in them, clean out anything you find."
+        },
+        {
+          "step_no": 7,
+          "text": "Turn the spray arms manually. While doing so, you should be inspecting if there is much resistance, if the arms are wobbling, or if the arms hit the dish racks."
+        },
+        {
+          "step_no": 8,
+          "text": "If your spray arms show any of the above symptoms, you will needreplacement spray arms."
+        },
+        {
+          "step_no": 9,
+          "text": "Before beginning this inspection, disconnect the power supply from your appliance."
+        },
+        {
+          "step_no": 10,
+          "text": "The docking station can be found at the back of the dishwasher on the water supply tube. Locate your docking station in order to inspect it."
+        },
+        {
+          "step_no": 11,
+          "text": "Begin by checking to see if the docking station is connected securely to the water supply tube. Next, check the flappers to make sure they can move freely and that they will close securely. You should also inspect all components, particularly the plastic pieces, of the docking station for signs of cracking, wear, or damage."
+        },
+        {
+          "step_no": 12,
+          "text": "If you find any issues while performing the checks above, you will need areplacement docking station."
+        },
+        {
+          "step_no": 13,
+          "text": "Disconnect your appliance from the power source before beginning."
+        },
+        {
+          "step_no": 14,
+          "text": "In order to access the food chopper, you will need to remove the lower spray arm as well as the spray tower. Once you have access to it, remove the food chopper in order to closely inspect it."
+        },
+        {
+          "step_no": 15,
+          "text": "Visually inspect the food chopper for any signs of wear, discoloration, damage, or cracking. Remove any debris you may find on or near the chopper."
+        },
+        {
+          "step_no": 16,
+          "text": "If you find your chopper shows any of the symptoms above, you will need areplacement chopper."
+        },
+        {
+          "step_no": 17,
+          "text": "Disconnect the water supply and the power source from your appliance before beginning this inspection."
+        },
+        {
+          "step_no": 18,
+          "text": "The water inlet valve is usually located behind the lower access panel. Remove the lower access panel in order to locate the inlet valve."
+        },
+        {
+          "step_no": 19,
+          "text": "Once you have located it, visually inspect the water inlet valve for any signs of cracking, wear, or other damage."
+        },
+        {
+          "step_no": 20,
+          "text": "If any issues are found during your inspection, you will need areplacement water inlet valve."
+        },
+        {
+          "step_no": 21,
+          "text": "Unplug your dishwasher before starting this inspection."
+        },
+        {
+          "step_no": 22,
+          "text": "Locate your water delivery tube in order to inspect it. You likely will need to remove your dishwasher’s lower access panel."
+        },
+        {
+          "step_no": 23,
+          "text": "Begin by checking the alignment of the tube, it should be aligned with the spray arms and have no restrictions impeding the flow of water. On some models, there is a filter inside the tube. If this is the case for your dishwasher, inspect the filter to see if it has become plugged. You should also visually inspect your water delivery tube to ensure it is not worn or damaged."
+        },
+        {
+          "step_no": 24,
+          "text": "If you find any issues while performing the inspections above, you will need areplacement water delivery tube."
+        },
+        {
+          "step_no": 25,
+          "text": "Unplug your dishwasher before beginning these inspections."
+        },
+        {
+          "step_no": 26,
+          "text": "Locate and remove the filters in the circulating portion of the pump and/or in the wash arm manifold."
+        },
+        {
+          "step_no": 27,
+          "text": "Clean any debris you find in the filters. Visually inspect the filters to see if they have become torn or otherwise damaged."
+        },
+        {
+          "step_no": 28,
+          "text": "If you find any issues with your filters, you will need areplacement dishwasher filter."
+        },
+        {
+          "step_no": 29,
+          "text": "To ensure your safety, unplug your dishwasher before starting."
+        },
+        {
+          "step_no": 30,
+          "text": "Locate your wash spinner, it will be found on the water feed tube, which is found at the rear of the wash tub. You may need to remove wash arms or other components in order to access it, depending on your model."
+        },
+        {
+          "step_no": 31,
+          "text": "Inspect the area around the wash spinner to ensure there are no obstructions preventing it from turning freely. You should also visually inspect it for any signs of discoloration, cracking, or damage."
+        },
+        {
+          "step_no": 32,
+          "text": "If you find your spinner shows any of the above issues, you will need areplacement wash spinner."
+        },
+        {
+          "step_no": 33,
+          "text": "To ensure your safety, be sure to unplug your appliance before beginning."
+        },
+        {
+          "step_no": 34,
+          "text": "The detergent dispenser will most likely be found on the inside of the door. You will not need to remove it to perform this inspection."
+        },
+        {
+          "step_no": 35,
+          "text": "Begin by running a test cycle with detergent in the dispenser to verify that the detergent is being released during the cleaning cycle."
+        },
+        {
+          "step_no": 36,
+          "text": "If It is, visually inspect the dispenser for any signs of wear or damage. Additionally, you should clean any clogged or caked-on detergent off the dispenser, as this may be preventing the detergent from being released properly."
+        },
+        {
+          "step_no": 37,
+          "text": "If you find any issues during your inspection, you will need areplacement detergent dispenser."
+        },
+        {
+          "step_no": 38,
+          "text": "Begin by disconnecting your appliance from the power source."
+        },
+        {
+          "step_no": 39,
+          "text": "Locate your heating element, it will be found on the bottom of the tub and depending on your model, it may have a cover. If it does have a cover, remove it."
+        },
+        {
+          "step_no": 40,
+          "text": "Remove the lower access panel and disconnect wires attached to the heating element’s terminals that protrude through the base of the dishwasher."
+        },
+        {
+          "step_no": 41,
+          "text": "Set your multimeter to the Rx1 setting and touch the terminals with the probes. The reading of a functional heating element varies between models but will fall between zero and infinity, refer to your owner’s manual to determine what reading you should receive. If your reading is exactly zero or infinity, it is defective."
+        },
+        {
+          "step_no": 42,
+          "text": "If your heating element’s reading is outside the manufacturer’s recommended range, you will need areplacement heating element."
+        },
+        {
+          "step_no": 43,
+          "text": "Disconnect the power source from your dishwasher before starting this inspection."
+        },
+        {
+          "step_no": 44,
+          "text": "The pump impellers will be found attached to the pump/motor. Depending on your model, you will need to remove all or some of the following parts to access the impellers: lower access panel, spray arm, pump housing, & screen. Once you have access to them, remove the impellers to closely inspect them."
+        },
+        {
+          "step_no": 45,
+          "text": "Visually inspect your impellers for any signs of cracking, wear, damage, or discoloration. Additionally, ensure that there are no debris preventing them from moving freely when in place."
+        },
+        {
+          "step_no": 46,
+          "text": "If you find any issues while performing the checks above, you will needreplacement impellers."
+        }
+      ],
+      "all_ps_numbers": [],
+      "source_url": "https://www.partselect.com/Repair/Dishwasher/Not-Cleaning-Properly/"
+    },
+    {
+      "id": "repair_0016",
+      "source_type": "repair_symptom",
+      "appliance_type": "dishwasher",
+      "symptom_name": "Not Draining",
+      "symptom_slug": "Not-Draining",
+      "title": "How To Fix A Dishwasher That Won't Drain",
+      "difficulty": "Unknown",
+      "repair_story": "Click a Part Below to Start Your Repair:Piston & Nut AssemblyDrain Pump & MotorCheck Valve FlapperBeltTimerDrain HoseAbout this repair:Rated as EASY564 repair stories7 step by step videos",
+      "video": null,
+      "related_parts": [],
+      "inspection_steps": [
+        {
+          "step_no": 1,
+          "text": "Disconnect your appliance from the power source."
+        },
+        {
+          "step_no": 2,
+          "text": "Locate your piston & nut assembly. It likely will be found on the bottom of the tub, beneath the sump cover."
+        },
+        {
+          "step_no": 3,
+          "text": "Inspect your piston & nut assembly to determine if it is functioning properly. The assembly should move up and down freely. When the piston is in the down position, it should form a tight seal. If it is not forming a complete seal, the dishwasher will not completely pump out the water."
+        },
+        {
+          "step_no": 4,
+          "text": "If you find any issues while performing the inspection, you will need areplacement piston & nut assembly."
+        },
+        {
+          "step_no": 5,
+          "text": "Before beginning, ensure that you have disconnected your appliance from the power source."
+        },
+        {
+          "step_no": 6,
+          "text": "Locate and remove your dishwasher pump. It likely will be found behind the lower access panel."
+        },
+        {
+          "step_no": 7,
+          "text": "Once you have removed it, using a multimeter on Rx1 mode, touch the pump’s terminals with the probes. You are testing for continuity and should receive a reading of zero or nearly zero. Next, you should test the ground connection by touching one of the probes to the bare metal housing while leaving one on a terminal. This test should not produce any reading."
+        },
+        {
+          "step_no": 8,
+          "text": "If the results of your tests are different from the above, you will need areplacement pump."
+        },
+        {
+          "step_no": 9,
+          "text": "To ensure your safety, unplug your dishwasher before beginning this inspection."
+        },
+        {
+          "step_no": 10,
+          "text": "Locate your check valve flapper in order to inspect it. In most models, it will be found on the outlet port of the drain pump or housing. You will need to remove the lower access panel in order to inspect it."
+        },
+        {
+          "step_no": 11,
+          "text": "Visually inspect the flapper for any signs of wear or damage. You should also check to see if there is any dirt or debris preventing the flapper from moving freely, remove anything you may find."
+        },
+        {
+          "step_no": 12,
+          "text": "If your valve is damaged, or if you find no objects preventing it from opening properly, you will need areplacement check valve flapper."
+        },
+        {
+          "step_no": 13,
+          "text": "Similar to other dishwasher inspections, disconnect your appliance from the power source before beginning."
+        },
+        {
+          "step_no": 14,
+          "text": "Your dishwasher belt will be found behind the lower access panel, attached to a pulley on the pump assembly and to another pulley on the motor assembly. Remove the belt in order to closely inspect it."
+        },
+        {
+          "step_no": 15,
+          "text": "Looking for any signs of burning, stretching, cracking, damage, or wear, inspect the belt."
+        },
+        {
+          "step_no": 16,
+          "text": "If you find any issues while inspecting it, you will need areplacement belt."
+        },
+        {
+          "step_no": 17,
+          "text": "Unplug your dishwasher before beginning this test."
+        },
+        {
+          "step_no": 18,
+          "text": "Your timer will likely be found either in the control panel or behind the lower kickplate. Locate and remove your appliance’s timer in order to test it."
+        },
+        {
+          "step_no": 19,
+          "text": "If your model has multiple sets of contacts/wires, you will need to refer to your owner’s manual to determine which sets to test."
+        },
+        {
+          "step_no": 20,
+          "text": "Remove the timer from your appliance, set your multimeter to Rx1000, and touch the contacts/wires with the probes. In most models, a functional timer will produce a reading of 2000-3500 ohms of resistance, but this varies from model to model. Please refer to your owner's manual to determine what reading you should see."
+        },
+        {
+          "step_no": 21,
+          "text": "If the results of your test are different than the manufacturer’s guidelines, you will need areplacement timer."
+        },
+        {
+          "step_no": 22,
+          "text": "Verify that the water and power sources have been disconnected from your dishwasher before beginning this inspection."
+        },
+        {
+          "step_no": 23,
+          "text": "Remove the lower access panel of your appliance and locate the drain. It will be connected to a pump below the lower spray arm."
+        },
+        {
+          "step_no": 24,
+          "text": "Remove the hose in order to inspect the drain hose closely. You are looking for any visible signs of cracking, damage or wear. You should also attempt to run water through the hose to determine if there is a blockage inside."
+        },
+        {
+          "step_no": 25,
+          "text": "If any issues are found while doing the inspections above, you will need areplacement hose."
+        }
+      ],
+      "all_ps_numbers": [],
+      "source_url": "https://www.partselect.com/Repair/Dishwasher/Not-Draining/"
+    },
+    {
+      "id": "repair_0017",
+      "source_type": "repair_symptom",
+      "appliance_type": "dishwasher",
+      "symptom_name": "Won't Fill With Water",
+      "symptom_slug": "Will-Not-Fill-Water",
+      "title": "How To Fix A Dishwasher That Will Not Fill With Water",
+      "difficulty": "simple",
+      "repair_story": "Click a Part Below to Start Your Repair:Water Inlet ValveFloatFloat SwitchDoor SwitchAbout this repair:Rated as EASY368 repair stories3 step by step videos",
+      "video": null,
+      "related_parts": [],
+      "inspection_steps": [
+        {
+          "step_no": 1,
+          "text": "Unplug your dishwasher and disconnect the water supply before starting."
+        },
+        {
+          "step_no": 2,
+          "text": "Locate your water inlet valve. It is commonly found on the lower left side of your dishwasher. You likely will need to remove the lower access panel to locate it."
+        },
+        {
+          "step_no": 3,
+          "text": "Looking for any signs of damage, wear, or cracking, visually inspect the water inlet valve."
+        },
+        {
+          "step_no": 4,
+          "text": "If your valve shows signs of any of the symptoms described above, you will need areplacement water inlet valve."
+        },
+        {
+          "step_no": 5,
+          "text": "Before beginning, verify that you have unplugged your appliance."
+        },
+        {
+          "step_no": 6,
+          "text": "Begin by opening your dishwasher door and removing the cover over the float assembly. Once you’ve done that, manually lift the float and let it drop multiple times, it should move freely, if it does not, remove the float to remove any foreign objects in the guide tube. You should also inspect the float for any visible wear or damage."
+        },
+        {
+          "step_no": 7,
+          "text": "Remove the lower access panel to determine if the float is mechanically engaging with the float switch."
+        },
+        {
+          "step_no": 8,
+          "text": "If you find any issues while performing this inspection, you will need areplacement float."
+        },
+        {
+          "step_no": 9,
+          "text": "Disconnect your dishwasher from the power source before beginning this inspection; you will be handling electrical components."
+        },
+        {
+          "step_no": 10,
+          "text": "Locate and remove the float switch. It will be found behind the lower access panel, sitting directly below the float assembly. Use caution when disconnecting the wires from the switch, do not pull directly on the wires."
+        },
+        {
+          "step_no": 11,
+          "text": "Once you have removed it, test the float switch by setting your multimeter to Rx1 and touching the probes to the switch’s terminals. This should produce a reading of zero or infinity. With the probes still touching the terminals, press in on the switch’s button, this should change the reading to the opposite extreme (from zero to infinity or infinity to zero)."
+        },
+        {
+          "step_no": 12,
+          "text": "If your test results produce readings that differ from the above, you will need areplacement float switch."
+        },
+        {
+          "step_no": 13,
+          "text": "Before beginning, ensure that you unplug your appliance as you will be working with electrical components."
+        },
+        {
+          "step_no": 14,
+          "text": "The door switch is typically located behind the door panel at the top of the door. You will need to separate the inner door from the outer door in order to access the switch. Once you have located it, remove the door switch in order to test it for continuity."
+        },
+        {
+          "step_no": 15,
+          "text": "Using a multimeter set to Rx1, test for continuity by touching one probe to the COM terminal and the other probe to the N.O. Terminal. With the actuator NOT pushed in, your reading should be infinity. Next, keeping the probes on the terminals, press in on the actuator until you hear a click, this should change the reading to zero."
+        },
+        {
+          "step_no": 16,
+          "text": "If the results of your test do not match the results above, you will need areplacement door switch."
+        }
+      ],
+      "all_ps_numbers": [],
+      "source_url": "https://www.partselect.com/Repair/Dishwasher/Will-Not-Fill-Water/"
+    },
+    {
+      "id": "repair_0018",
+      "source_type": "repair_symptom",
+      "appliance_type": "dishwasher",
+      "symptom_name": "Won't Dispense Detergent",
+      "symptom_slug": "Will-Not-Dispense-Detergent",
+      "title": "How to Fix A Dishwasher That Won't Dispense Detergent",
+      "difficulty": "simple",
+      "repair_story": "Click a Part Below to Start Your Repair:Detergent & Rinse Aid DispensersRinse Aid CapDoor Spring & Hinge PinWax MotorBi-Metal ReleaseTimerAbout this repair:Rated as EASY703 repair stories6 step by step videos",
+      "video": null,
+      "related_parts": [],
+      "inspection_steps": [
+        {
+          "step_no": 1,
+          "text": "Disconnect your appliance from the power source."
+        },
+        {
+          "step_no": 2,
+          "text": "Locate your dispenser, you will not need to remove it to inspect it. It will most likely be found attached to the inside of the dishwasher door."
+        },
+        {
+          "step_no": 3,
+          "text": "Visually inspect the dispenser for any signs of cracking, discoloration, or damage. If you find any caked-on detergent or debris on the dispenser, thoroughly clean it with a wet cloth."
+        },
+        {
+          "step_no": 4,
+          "text": "If you find any of the above issues, you will need areplacement dispenser."
+        },
+        {
+          "step_no": 5,
+          "text": "This is a very simple inspection; no tools or disassembly will be needed."
+        },
+        {
+          "step_no": 6,
+          "text": "The rinse aid dispensing cap is located on the inner door panel of your dishwasher. Remove the cap from the door in order to inspect it."
+        },
+        {
+          "step_no": 7,
+          "text": "Looking for any signs of melting, warping, cracking, or discoloration, visually inspect the rinse aid cap."
+        },
+        {
+          "step_no": 8,
+          "text": "If you find any issues while performing the inspection above, you will need areplacement rinse aid cap."
+        },
+        {
+          "step_no": 9,
+          "text": "No tools or disassembly will be required; this is a very simple inspection."
+        },
+        {
+          "step_no": 10,
+          "text": "The door spring & hinge pin will be found on the inside of the dishwasher door, on some models it may be covered by the detergent dispenser assembly. Remove any components covering it if applicable."
+        },
+        {
+          "step_no": 11,
+          "text": "Visually inspect the spring and pin to see if they are bent, broken, corroded, or otherwise damaged."
+        },
+        {
+          "step_no": 12,
+          "text": "If you find any issues with your spring and pin, you will need areplacement door spring & hinge pin."
+        },
+        {
+          "step_no": 13,
+          "text": "Disconnect your appliance from the power source before beginning."
+        },
+        {
+          "step_no": 14,
+          "text": "Depending on your model, you will need to remove the external door panel or the internal door panel in order to access the wax motor, which will be located near the detergent dispenser cup. Remove the wax motor in order to test it."
+        },
+        {
+          "step_no": 15,
+          "text": "Using a multimeter on the Rx1 setting, touch the probes to one terminal each to test it. If you receive a reading of infinity, the motor is defective."
+        },
+        {
+          "step_no": 16,
+          "text": "If your motor fails the test above, you will need areplacement wax motor."
+        },
+        {
+          "step_no": 17,
+          "text": "Disconnect your appliance from the power source before beginning this or any other test."
+        },
+        {
+          "step_no": 18,
+          "text": "Locate the bi-metal release. Depending on your model, you will need to remove either the internal or the external door panel in order to access the bi-metal release. Before removing the release, with the panel removed you should check the alignment of the release. You can do this by closing the detergent cup and pushing in on the metal with a small screwdriver until the detergent cup opens. Often only a slight adjustment is needed to solve this issue."
+        },
+        {
+          "step_no": 19,
+          "text": "If this did not fix your issue, remove the release, set your multimeter to Rx1, and touch the probes to the release’s terminals. If your multimeter shows a reading of infinity, your release is defective."
+        },
+        {
+          "step_no": 20,
+          "text": "If your test results indicate your release is faulty, you will need areplacement bi-metal release."
+        },
+        {
+          "step_no": 21,
+          "text": "Begin by disconnecting the power from your appliance."
+        },
+        {
+          "step_no": 22,
+          "text": "The timer will most likely be found in your unit’s control panel. You will need to remove all or part of your appliance’s cabinet to access it."
+        },
+        {
+          "step_no": 23,
+          "text": "Once you have located it, remove the timer from your dishwasher to test it. If your timer has multiple contacts, you will need to refer to your wiring diagram to identify which contacts you should be testing."
+        },
+        {
+          "step_no": 24,
+          "text": "With your multimeter set to Rx1000, touch each probe to one contact/wire. A normal reading for a dishwasher timer is 2000-3500 ohms of resistance, but this varies from model to model, refer to your owner’s manual to determine what reading you should receive."
+        },
+        {
+          "step_no": 25,
+          "text": "If your reading is outside the manufacturer’s recommendation, you will need areplacement timer."
+        }
+      ],
+      "all_ps_numbers": [],
+      "source_url": "https://www.partselect.com/Repair/Dishwasher/Will-Not-Dispense-Detergent/"
+    }
+  ],
+  "failed_urls": [
+    "https://www.partselect.com/Repair/Refrigerator/Runs-Too-Long/",
+    "https://www.partselect.com/Repair/Dishwasher/Not-Drying-Dishes/"
+  ]
+}
