@@ -1,6 +1,7 @@
 # backend/agents/specialists.py
 import json
 import ast
+from contextvars import ContextVar
 from langchain.agents import create_agent
 from langchain_core.tools import Tool
 from pydantic import BaseModel, Field
@@ -14,6 +15,9 @@ from backend.prompts import CATALOG_AGENT_PROMPT, REPAIR_AGENT_PROMPT, ORDER_AGE
 
 class AgentQuery(BaseModel):
     query: str = Field(description="The user's query or request to route to the specialist agent.")
+
+# Context variable to pass the orchestrator's request history to specialists
+chat_history_var = ContextVar("chat_history", default=[])
 
 # ── Specialist executors ──────────────────────────────────────────
 catalog_executor = create_agent(
@@ -36,15 +40,21 @@ order_executor = create_agent(
 
 # ── Wrap each executor as a Tool for the orchestrator ─────────────
 async def _run_catalog(query: str) -> str:
-    result = await catalog_executor.ainvoke({"messages": [{"role": "user", "content": query}]})
+    history = chat_history_var.get()
+    messages = history[:-1] + [{"role": "user", "content": query}] if history else [{"role": "user", "content": query}]
+    result = await catalog_executor.ainvoke({"messages": messages})
     return _format_agent_result(result)
 
 async def _run_repair(query: str) -> str:
-    result = await repair_executor.ainvoke({"messages": [{"role": "user", "content": query}]})
+    history = chat_history_var.get()
+    messages = history[:-1] + [{"role": "user", "content": query}] if history else [{"role": "user", "content": query}]
+    result = await repair_executor.ainvoke({"messages": messages})
     return _format_agent_result(result)
 
 async def _run_order(query: str) -> str:
-    result = await order_executor.ainvoke({"messages": [{"role": "user", "content": query}]})
+    history = chat_history_var.get()
+    messages = history[:-1] + [{"role": "user", "content": query}] if history else [{"role": "user", "content": query}]
+    result = await order_executor.ainvoke({"messages": messages})
     return _format_agent_result(result)
 
 def _get_message_text(content) -> str:

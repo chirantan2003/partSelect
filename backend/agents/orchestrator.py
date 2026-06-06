@@ -1,7 +1,7 @@
 # backend/agents/orchestrator.py
 from langchain.agents import create_agent
 from backend.llm import flash
-from backend.agents.specialists import catalog_agent_tool, repair_agent_tool, order_agent_tool
+from backend.agents.specialists import catalog_agent_tool, repair_agent_tool, order_agent_tool, chat_history_var
 from backend.prompts import ORCHESTRATOR_PROMPT
 
 agent_tools = [catalog_agent_tool, repair_agent_tool, order_agent_tool]
@@ -42,7 +42,12 @@ async def run_orchestrator(user_input: str, context: str = "") -> dict:
                 
     input_messages.append({"role": "user", "content": user_input})
     
-    result = await orchestrator.ainvoke({"messages": input_messages})
+    token = chat_history_var.set(input_messages)
+    try:
+        result = await orchestrator.ainvoke({"messages": input_messages})
+    finally:
+        chat_history_var.reset(token)
+        
     messages = result.get("messages", [])
     
     final_text = ""
