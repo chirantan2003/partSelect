@@ -157,20 +157,38 @@ The seed script:
 
 ---
 
-## Database Schema Reference
+## 💬 Testing Data Coverage with Prompts
 
-The data in this directory populates the following tables:
+You can verify that the seeded database tables are functioning correctly by submitting these prompts in the chat:
 
-| Table | Source |
-|---|---|
-| `parts` | `parts_raw.json` |
-| `appliance_models` | `parts_raw.json` → `compatible_models` |
-| `part_compatibility` | `parts_raw.json` → `compatible_models` (the compatibility matrix) |
-| `part_cross_refs` | `parts_raw.json` → `alt_numbers` |
-| `symptoms` | `repair_symptoms_raw.json` → `symptom_display` |
-| `part_symptoms` | `repair_symptoms_raw.json` → `part_ps_numbers` |
-| `installation_steps` | `parts_raw.json` → `installation_steps` |
-| `repair_guides` | `repair_symptoms_raw.json` + `blogs_raw.json` |
-| `related_parts` | `parts_raw.json` (commonly bought together) |
+### 1. Verifying Symptom Keyword Matching (`symptoms` table)
+* **Prompt:** `My refrigerator is Leaking.`
+* **Data Flow:** Triggers a keyword query:
+  ```sql
+  SELECT id FROM symptoms WHERE description ILIKE '%Leaking%' AND appliance_type = 'refrigerator';
+  ```
+* **Expected:** Matches the `"Leaking"` symptom row and returns related parts.
 
-See [`db/schema.sql`](../db/schema.sql) for the full table definitions.
+### 2. Verifying Vector Similarity Search (`symptoms` + `pgvector`)
+* **Prompt:** `dishwasher water wont leave`
+* **Data Flow:** Computes a 768-dimensional embedding vector of the prompt and queries the HNSW index:
+  ```sql
+  SELECT description, (embedding <=> $1) as distance 
+  FROM symptoms 
+  WHERE appliance_type = 'dishwasher' 
+  ORDER BY distance LIMIT 1;
+  ```
+* **Expected:** Cosine similarity matches `"Not Draining"` (distance < 0.3) and yields drain pumps.
+
+### 3. Verifying Compatibility Matrix (`part_compatibility` table)
+* **Prompt:** `Is part number PS10065979 compatible with WDT780SAEM1?`
+* **Data Flow:** Executes a deterministic check on the join table:
+  ```sql
+  SELECT pc.* 
+  FROM part_compatibility pc
+  JOIN parts p ON p.id = pc.part_id
+  JOIN appliance_models m ON m.id = pc.model_id
+  WHERE p.ps_number = 'PS10065979' AND m.model_number = 'WDT780SAEM1';
+  ```
+* **Expected:** Returns the link record, outputting a compatible verdict.
+

@@ -256,25 +256,45 @@ uvicorn backend.main:app --reload --port 8000
 
 ### Testing the API directly
 
+You can test the backend streaming API directly via `curl` payloads.
+
+#### Scenario A: Single-Turn Compatibility Check (The Trap Query)
 ```bash
 curl -N -X POST http://localhost:8000/chat \
   -H "Content-Type: application/json" \
   -d '{
-    "messages": [{"role": "user", "content": "Is PS11752778 compatible with WDT780SAEM1?"}],
-    "session_id": "test-1"
+    "messages": [
+      { "role": "user", "content": "Is PS11752778 compatible with WDT780SAEM1?" }
+    ],
+    "session_id": "api-test-session"
   }'
 ```
 
-Expected SSE output:
+#### Scenario B: Multi-Turn Conversation (Context & Pronoun Resolution)
+To verify that the orchestrator propagates history via `ContextVar` to resolve pronouns, pass the message array representing the preceding turns:
+```bash
+curl -N -X POST http://localhost:8000/chat \
+  -H "Content-Type: application/json" \
+  -d '{
+    "messages": [
+      { "role": "user", "content": "Show me details for part PS334230." },
+      { "role": "assistant", "content": "Here is the Door Catch Kit (PS334230) for $8.55..." },
+      { "role": "user", "content": "Is it compatible with my WDF520PADM model?" }
+    ],
+    "session_id": "api-test-session"
+  }'
+```
+
+#### Expected SSE Output Stream:
 ```
 event: tool_status
 data: {"state": "routing", "message": "Finding the right specialist..."}
 
 event: tool_result
-data: {"tool_name": "check_compatibility", "args": {...}, "result": {"compatible": false, ...}}
+data: {"tool_name": "check_compatibility", "args": {"ps_number": "PS334230", "model_number": "WDF520PADM"}, "result": {"compatible": true, ...}}
 
 event: text
-data: "No — PS11752778 is a refrigerator part, but WDT780SAEM1 is a dishwasher..."
+data: "Yes, the Door Catch Kit (PS334230) is compatible with your WDF520PADM dishwasher..."
 
 event: done
 data: {"agent": "catalog_agent"}

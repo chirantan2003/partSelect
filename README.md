@@ -251,22 +251,93 @@ pytest eval/ -v
 
 ---
 
-## 💬 Example Queries
+## 💬 Comprehensive Testing Prompts
 
-### Query 1 — Installation
-> "How can I install part number PS11752778?"
+Use these 12 distinct prompt scenarios during a demonstration to verify every subsystem, agent, and component in the application.
 
-**Expected:** `lookup_part` → `ProductCard` · `get_installation_info` → `InstallDrawer` with steps, difficulty, and video link.
+### Category 1: Product & Model Catalog Lookup
 
-### Query 2 — Compatibility (⚠️ Trap)
-> "Is PS11752778 compatible with my WDT780SAEM1 model?"
+1. **Part Details & Stock Inquiry**
+   * **Prompt:** `Can you tell me the price and stock status of part number PS10065979?`
+   * **Route:** `catalog_agent` ➔ `lookup_part(identifier="PS10065979")`
+   * **UI Render:** `ProductCard` (Upper Rack Adjuster Kit, $55.29, In Stock).
 
-**Expected:** `check_compatibility` → **Red** `CompatVerdict` card: "This is a refrigerator part, but WDT780SAEM1 is a dishwasher."
+2. **Model Identification**
+   * **Prompt:** `What kind of appliance is model number WDT780SAEM1?`
+   * **Route:** `catalog_agent` ➔ `lookup_model(model_number="WDT780SAEM1")`
+   * **UI Render:** Text explaining the model is a Whirlpool dishwasher.
 
-### Query 3 — Troubleshooting
-> "The ice maker on my Whirlpool fridge is not working. How can I fix it?"
+---
 
-**Expected:** `search_repair_guides` → `find_parts_by_symptom` → `lookup_part` → Diagnosis + `ProductCard` recommendations.
+### Category 2: Compatibility Engine (Deterministic SQL)
+
+3. **Compatible Check (Valid Relationship)**
+   * **Prompt:** `Is part number PS10065979 compatible with my WDT780SAEM1 dishwasher?`
+   * **Route:** `catalog_agent` ➔ `check_compatibility(ps_number="PS10065979", model_number="WDT780SAEM1")`
+   * **UI Render:** Green check mark `CompatVerdict` card (Compatible).
+
+4. **Incompatible Check (Appliance Type Mismatch Trap)**
+   * **Prompt:** `Is the refrigerator door bin PS11752778 compatible with my WDT780SAEM1 dishwasher?`
+   * **Route:** `catalog_agent` ➔ `check_compatibility(ps_number="PS11752778", model_number="WDT780SAEM1")`
+   * **UI Render:** Red warning `CompatVerdict` card detailing: *"This is a refrigerator part, but your model WDT780SAEM1 is a dishwasher."*
+
+5. **Incompatible Check (Same Appliance Type, No Matrix Link)**
+   * **Prompt:** `Is the refrigerator ice maker PS2121513 compatible with my WRS322FDAM00 refrigerator?`
+   * **Route:** `catalog_agent` ➔ `check_compatibility(ps_number="PS2121513", model_number="WRS322FDAM00")`
+   * **UI Render:** Red `CompatVerdict` card (Incompatible).
+
+---
+
+### Category 3: Troubleshooting & Diagnosis (Hybrid RAG)
+
+6. **Exact Token Symptom Search**
+   * **Prompt:** `My refrigerator is Leaking. What parts do I need to inspect?`
+   * **Route:** `repair_agent` ➔ `find_parts_by_symptom` (exact match on "Leaking") + `search_repair_guides`
+   * **UI Render:** Diagnosis instructions alongside recommended replacement part cards.
+
+7. **Colloquial Phrase Symptom Search**
+   * **Prompt:** `dishwasher water wont leave`
+   * **Route:** `repair_agent` ➔ `find_parts_by_symptom` (pgvector cosine similarity match to "Not Draining") + `search_repair_guides`
+   * **UI Render:** Recommendations for drain pumps and filter checks.
+
+---
+
+### Category 4: Installation Instructions
+
+8. **Guided Repair Accordion**
+   * **Prompt:** `How do I install the dishwasher heating element PS8260087?`
+   * **Route:** `catalog_agent` ➔ `get_installation_info(ps_number="PS8260087")`
+   * **UI Render:** `InstallDrawer` accordion widget showing numbered installation steps, estimated times, and video link.
+
+---
+
+### Category 5: Cart & Order Operations
+
+9. **Add to Shopping Cart**
+   * **Prompt:** `Please add dishwasher rack track stop PS11746591 to my cart.`
+   * **Route:** `order_agent` ➔ `add_to_cart(ps_number="PS11746591", qty=1)`
+   * **UI Render:** Text updating cart status and showing items added.
+
+10. **Order Status & Tracking**
+    * **Prompt:** `Can you check the tracking status of my order ORD-10293?`
+    * **Route:** `order_agent` ➔ `get_order_status(order_id="ORD-10293")`
+    * **UI Render:** Order status details (Shipped) and direct link to the tracking page.
+
+---
+
+### Category 6: Multi-Turn Context & Guardrails
+
+11. **Context-Aware Pronoun Resolution (Multi-Turn)**
+    * **Prompt Sequence:**
+      * Turn 1: `Show me details for part PS334230.` (Catalog specialist loads the part details card)
+      * Turn 2: `Is it compatible with my WDF520PADM model?`
+    * **Route:** Orchestrator context propagation passes chat history via `ContextVar` to the catalog executor, allowing it to automatically map `"it"` to `PS334230` during the compatibility matrix query.
+    * **UI Render:** Red/Green `CompatVerdict` card.
+
+12. **Out-of-Scope Pre-Routing Refusal**
+    * **Prompts:** `How do I change the oil in my Honda Civic?` or `My laundry washing machine won't spin.`
+    * **Route:** Pre-orchestrator `is_in_scope` guardrail (Gemini Flash-Lite) returns `False` inside 300ms.
+    * **UI Render:** Polite refusal detailing that the assistant only supports refrigerators and dishwashers.
 
 ---
 

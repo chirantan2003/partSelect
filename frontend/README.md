@@ -196,21 +196,29 @@ No other changes needed.
 
 ---
 
-## Environment
+## 💬 Testing UI Components with Prompts
 
-The backend URL is currently hardcoded in `useAgentChat.ts`:
+You can test each interactive component on the frontend by typing these specific prompts in the chat:
 
-```typescript
-const resp = await fetch("http://localhost:8000/chat", { ... });
-```
+### 1. Triggering `<ProductCard>`
+* **Prompt:** `Can you tell me the price and stock status of part number PS10065979?`
+* **UI Behavior:** Renders a clean white card with:
+  * Part Image placeholder
+  * Name: *"Upper Rack Adjuster Kit - White Wheels..."*
+  * Pricing: *"$55.29"*
+  * Badge: *"In Stock"* (Green)
+  * Ratings: 5 stars
+  * CTA: *"Add to Cart"* button (Orange)
 
-For production, move this to a Next.js environment variable:
+### 2. Triggering `<CompatVerdict>`
+* **Prompt:** `Is the refrigerator door bin PS11752778 compatible with my WDT780SAEM1 dishwasher?`
+* **UI Behavior:** Renders a Red Warning card with an alert icon showing the message:
+  * Title: *"Incompatible / Mismatch"*
+  * Content: *"This is a refrigerator part, but your model WDT780SAEM1 is a dishwasher."*
 
-```env
-# .env.local
-NEXT_PUBLIC_API_URL=https://your-api.example.com
-```
+### 3. Triggering `<InstallDrawer>`
+* **Prompt:** `How do I install the dishwasher heating element PS8260087?`
+* **UI Behavior:** Renders a collapsible accordion drawer below the product card:
+  * Shows difficulty level (e.g. *Medium*) and estimated time (e.g. *15 mins*).
+  * Expands to show numbered, sequential steps.
 
-```typescript
-const resp = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/chat`, { ... });
-```
