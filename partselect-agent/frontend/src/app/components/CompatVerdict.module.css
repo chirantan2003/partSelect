@@ -1,0 +1,105 @@
+.card {
+  display: flex;
+  gap: 16px;
+  padding: 18px;
+  border-radius: var(--radius);
+  border: 1px solid var(--ps-border);
+  background: var(--ps-card);
+  max-width: 600px;
+  margin: 12px 0;
+  box-shadow: var(--shadow-sm);
+  animation: rise 0.4s ease-out;
+}
+
+.cardGood {
+  border-left: 6px solid var(--ps-ok);
+  background: #f0fdf4;
+}
+
+.cardBad {
+  border-left: 6px solid var(--ps-bad);
+  background: #fef2f2;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cardGood .iconContainer {
+  background: var(--ps-ok);
+  color: #ffffff;
+}
+
+.cardBad .iconContainer {
+  background: var(--ps-bad);
+  color: #ffffff;
+}
+
+.icon {
+  line-height: 1;
+}
+
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ps-blue);
+}
+
+.cardGood .title {
+  color: #065f46;
+}
+
+.cardBad .title {
+  color: #991b1b;
+}
+
+.details {
+  font-size: 14px;
+  color: var(--ps-muted);
+}
+
+.hint {
+  font-size: 13px;
+  color: #7f1d1d;
+  background: rgba(239, 68, 68, 0.08);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  margin-top: 6px;
+  border: 1px solid rgba(239, 68, 68, 0.15);
+}
+
+.mismatchBox {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  margin-top: 8px;
+}
+
+.warningIcon {
+  font-size: 16px;
+}
+
+.warningText {
+  font-size: 13px;
+  color: #78350f;
+  line-height: 1.4;
+}

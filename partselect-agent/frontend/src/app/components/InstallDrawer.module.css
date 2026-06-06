@@ -1,0 +1,166 @@
+.container {
+  background: var(--ps-card);
+  border: 1px solid var(--ps-border);
+  border-radius: var(--radius);
+  max-width: 600px;
+  margin: 12px 0;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  animation: rise 0.4s ease-out;
+  transition: all 0.2s ease;
+}
+
+.container:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.details {
+  width: 100%;
+}
+
+.summary {
+  padding: 16px;
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+}
+
+.summary::-webkit-details-marker {
+  display: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ps-blue);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.easy {
+  background: #e6f4ea;
+  color: #137333;
+}
+
+.medium {
+  background: #fef7e0;
+  color: #b06000;
+}
+
+.hard {
+  background: #fce8e6;
+  color: #c5221f;
+}
+
+.time {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ps-muted);
+}
+
+.arrow {
+  font-size: 10px;
+  color: var(--ps-muted);
+  width: 12px;
+  text-align: center;
+}
+
+.content {
+  padding: 16px;
+  border-top: 1px solid var(--ps-border);
+  background: #fafafb;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.stepList {
+  list-style: none;
+  margin: 0 0 16px 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stepItem {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.stepNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  border-radius: 50%;
+  background: var(--ps-blue);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.stepText {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ps-text);
+  flex: 1;
+}
+
+.videoLinkContainer {
+  padding-top: 12px;
+  border-top: 1px dashed var(--ps-border);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.videoButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--ps-teal);
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.videoButton:hover {
+  background: #00607e;
+  transform: translateY(-1px);
+}
+
+.videoIcon {
+  width: 16px;
+  height: 16px;
+}
