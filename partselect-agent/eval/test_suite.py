@@ -1,6 +1,7 @@
 # eval/test_suite.py
 from dotenv import load_dotenv
-load_dotenv()
+load_dotenv(override=True)
+
 
 import pytest
 from backend.tools.catalog_tools import lookup_part, check_compatibility

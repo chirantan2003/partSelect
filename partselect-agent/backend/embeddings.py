@@ -3,10 +3,15 @@ import asyncio
 from google import genai
 from google.genai import types
 import os
+from dotenv import load_dotenv
+
+# Ensure latest keys are loaded from .env
+load_dotenv(override=True)
 
 # Initialize Google GenAI client
 # It automatically reads GEMINI_API_KEY from environment
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+
 
 async def embed(text: str) -> list[float]:
     """Generate 768-dimensional embeddings using gemini-embedding-2."""

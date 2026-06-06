@@ -1,7 +1,8 @@
 # test_agents.py
 import asyncio
 from dotenv import load_dotenv
-load_dotenv()
+load_dotenv(override=True)
+
 
 from backend.db import get_pool, close_pool
 from backend.agents.specialists import catalog_executor, repair_executor

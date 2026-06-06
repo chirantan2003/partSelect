@@ -60,8 +60,29 @@ async def seed_from_json(reset: bool = False):
             if result["errors"]:
                 for err in result["errors"][:5]:
                     print(f"    Error: {err['ps_number']} -> {err['error']}")
+            
+            # Ensure the primary test parts have their installation steps populated
+            print("  Populating installation steps for primary test parts...")
+            f_syms = ["Refrigerator is too warm", "Ice maker not making ice"]
+            d_syms = ["Dishwasher is not draining", "Water remains in the bottom of dishwasher"]
+            primary_parts = _build_hardcoded_parts(f_syms, d_syms)[:4]
+
+            for p in primary_parts:
+                part_row = await conn.fetchrow("select id from parts where ps_number = $1", p.ps_number)
+                if part_row:
+                    part_id = part_row["id"]
+                    # Clear any existing steps first
+                    await conn.execute("delete from installation_steps where part_id = $1", part_id)
+                    # Insert hardcoded steps
+                    for step in p.install_steps:
+                        await conn.execute("""
+                            insert into installation_steps (part_id, step_no, text, difficulty, est_minutes, video_url)
+                            values ($1, $2, $3, $4, $5, $6)
+                        """, part_id, step["step_no"], step["text"], step.get("difficulty"), step.get("est_minutes"), step.get("video_url"))
+                    print(f"    Installation steps populated for {p.ps_number}")
         else:
             print(f"  [Skip] {parts_file} not found. Run parts_scraper first.")
+
 
         # ── 2) Load symptoms from repair data ────────────────────
         repair_file = os.path.join(data_dir, "repair_symptoms_raw.json")

@@ -1,6 +1,11 @@
 # backend/llm.py
 from langchain_google_genai import ChatGoogleGenerativeAI
 import os
+from dotenv import load_dotenv
+
+# Ensure latest keys are loaded from .env
+load_dotenv(override=True)
+
 
 # Create Gemini model instances via LangChain
 flash = ChatGoogleGenerativeAI(
